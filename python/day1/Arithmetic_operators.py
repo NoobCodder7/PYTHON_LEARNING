@@ -1,4 +1,4 @@
-#here is a simple program to learn about operators in python 
+#here is a simple program to learn about Arithmetic operators in python 
 
 # Arithmetic operators 
 
