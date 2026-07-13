@@ -1,0 +1,392 @@
+# Conditional Statements in Python
+
+Conditional statements allow a program to make decisions based on certain conditions. They execute different blocks of code depending on whether a condition is **True** or **False**.
+
+Python provides the following conditional statements:
+
+1. **if statement**
+2. **if-else statement**
+3. **if-elif-else statement**
+4. **Nested if statement**
+5. **Short-hand if and if-else (Ternary Operator)**
+
+---
+
+# 1. if Statement
+
+The `if` statement executes a block of code only if the given condition is `True`.
+
+### Syntax
+
+```python
+if condition:
+    # Code to execute
+```
+
+### Example
+
+```python
+age = 18
+
+if age >= 18:
+    print("You are eligible to vote.")
+```
+
+**Output**
+
+```
+You are eligible to vote.
+```
+
+---
+
+# 2. if-else Statement
+
+The `if-else` statement executes one block if the condition is `True` and another block if it is `False`.
+
+### Syntax
+
+```python
+if condition:
+    # Code if condition is True
+else:
+    # Code if condition is False
+```
+
+### Example
+
+```python
+num = 10
+
+if num % 2 == 0:
+    print("Even Number")
+else:
+    print("Odd Number")
+```
+
+**Output**
+
+```
+Even Number
+```
+
+---
+
+# 3. if-elif-else Statement
+
+When multiple conditions need to be checked, use `elif`.
+
+### Syntax
+
+```python
+if condition1:
+    # Code
+elif condition2:
+    # Code
+elif condition3:
+    # Code
+else:
+    # Code
+```
+
+### Example
+
+```python
+marks = 85
+
+if marks >= 90:
+    print("Grade A+")
+elif marks >= 80:
+    print("Grade A")
+elif marks >= 70:
+    print("Grade B")
+elif marks >= 60:
+    print("Grade C")
+else:
+    print("Fail")
+```
+
+**Output**
+
+```
+Grade A
+```
+
+---
+
+# 4. Nested if Statement
+
+A nested `if` means placing one `if` statement inside another.
+
+### Syntax
+
+```python
+if condition1:
+    if condition2:
+        # Code
+```
+
+### Example
+
+```python
+age = 20
+citizen = True
+
+if age >= 18:
+    if citizen:
+        print("Eligible to vote.")
+```
+
+**Output**
+
+```
+Eligible to vote.
+```
+
+---
+
+# 5. Short-hand if Statement
+
+Used when only one statement needs to be executed.
+
+### Syntax
+
+```python
+if condition: statement
+```
+
+### Example
+
+```python
+age = 20
+
+if age >= 18: print("Adult")
+```
+
+**Output**
+
+```
+Adult
+```
+
+---
+
+# 6. Short-hand if-else (Ternary Operator)
+
+The ternary operator allows writing an `if-else` statement in one line.
+
+### Syntax
+
+```python
+value_if_true if condition else value_if_false
+```
+
+### Example
+
+```python
+num = 7
+
+result = "Even" if num % 2 == 0 else "Odd"
+print(result)
+```
+
+**Output**
+
+```
+Odd
+```
+
+---
+
+# Comparison Operators Used in Conditions
+
+| Operator | Meaning | Example |
+|----------|---------|---------|
+| `==` | Equal to | `a == b` |
+| `!=` | Not equal to | `a != b` |
+| `>` | Greater than | `a > b` |
+| `<` | Less than | `a < b` |
+| `>=` | Greater than or equal to | `a >= b` |
+| `<=` | Less than or equal to | `a <= b` |
+
+---
+
+# Logical Operators
+
+## and
+
+Returns `True` if **both** conditions are `True`.
+
+```python
+age = 20
+salary = 30000
+
+if age >= 18 and salary >= 25000:
+    print("Eligible")
+```
+
+---
+
+## or
+
+Returns `True` if **at least one** condition is `True`.
+
+```python
+marks = 75
+sports = True
+
+if marks >= 80 or sports:
+    print("Eligible for admission")
+```
+
+---
+
+## not
+
+Reverses the result.
+
+```python
+logged_in = False
+
+if not logged_in:
+    print("Please log in.")
+```
+
+---
+
+# Membership Operator with if
+
+```python
+name = "Viraj"
+
+if "V" in name:
+    print("Found")
+```
+
+**Output**
+
+```
+Found
+```
+
+---
+
+# Identity Operator with if
+
+```python
+a = [1, 2]
+b = a
+
+if a is b:
+    print("Same object")
+```
+
+**Output**
+
+```
+Same object
+```
+
+---
+
+# Real-Life Examples
+
+## Check Voting Eligibility
+
+```python
+age = int(input("Enter your age: "))
+
+if age >= 18:
+    print("You can vote.")
+else:
+    print("You cannot vote.")
+```
+
+---
+
+## Find the Largest of Two Numbers
+
+```python
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+if a > b:
+    print(a, "is larger")
+else:
+    print(b, "is larger")
+```
+
+---
+
+## Check Positive, Negative, or Zero
+
+```python
+num = int(input("Enter a number: "))
+
+if num > 0:
+    print("Positive")
+elif num < 0:
+    print("Negative")
+else:
+    print("Zero")
+```
+
+---
+
+# Practice Problems (Easy)
+
+1. Check whether a number is positive or negative.
+2. Check whether a number is even or odd.
+3. Find the larger of two numbers.
+4. Find the largest of three numbers.
+5. Check whether a person is eligible to vote.
+6. Check whether a year is a leap year.
+7. Check whether a number is divisible by 5.
+8. Check whether a student has passed (marks >= 35).
+9. Check whether a character is a vowel or consonant.
+10. Check whether a number is a multiple of both 3 and 5.
+
+---
+
+# Practice Problems (Intermediate)
+
+11. Calculate grades based on marks.
+12. Find the smallest of three numbers.
+13. Check whether a number is a palindrome.
+14. Check whether a number is an Armstrong number.
+15. Check whether a number is prime.
+16. Build a simple calculator using `if-elif-else`.
+17. Create a login system using username and password.
+18. Check whether a triangle is valid.
+19. Determine whether a person is a child, teenager, adult, or senior citizen.
+20. Find the profit or loss percentage.
+
+---
+
+# Challenge Problems
+
+1. ATM Menu using `if-elif-else`.
+2. Electricity bill calculator.
+3. BMI Calculator with health category.
+4. Student Report Card Generator.
+5. Movie ticket booking eligibility.
+6. Restaurant bill with discounts.
+7. Rock-Paper-Scissors game.
+8. Number Guessing Game.
+9. Banking System Menu.
+10. Employee Salary Calculator.
+
+---
+
+# Summary
+
+- **if** → Executes code when the condition is `True`.
+- **if-else** → Chooses between two blocks of code.
+- **if-elif-else** → Checks multiple conditions.
+- **Nested if** → Places one `if` inside another.
+- **Short-hand if** → One-line `if` statement.
+- **Ternary Operator** → One-line `if-else` expression.
+- **Comparison operators** → Compare values.
+- **Logical operators (`and`, `or`, `not`)** → Combine or modify conditions.
+
+Conditional statements are the foundation of decision-making in Python and are widely used in automation, web development, AI/ML, games, and coding interviews.
