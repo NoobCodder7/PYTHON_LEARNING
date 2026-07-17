@@ -1,0 +1,365 @@
+# Python Tuple
+
+A **Tuple** is an ordered, immutable (unchangeable) collection that allows duplicate values. Once a tuple is created, its elements cannot be modified.
+
+---
+
+# Features of Tuple
+
+- Ordered (maintains insertion order)
+- Immutable (cannot be changed after creation)
+- Allows duplicate values
+- Can store different data types
+- Supports indexing and slicing
+- Faster than lists
+
+---
+
+# Syntax
+
+```python
+tuple_name = (value1, value2, value3)
+```
+
+---
+
+# Creating a Tuple
+
+```python
+fruits = ("Apple", "Banana", "Mango")
+
+print(fruits)
+```
+
+**Output**
+
+```
+('Apple', 'Banana', 'Mango')
+```
+
+---
+
+# Tuple with Different Data Types
+
+```python
+data = (10, "Python", 3.14, True)
+
+print(data)
+```
+
+**Output**
+
+```
+(10, 'Python', 3.14, True)
+```
+
+---
+
+# Single Element Tuple
+
+A comma is required when creating a tuple with one element.
+
+```python
+num = (10,)
+print(type(num))
+```
+
+**Output**
+
+```
+<class 'tuple'>
+```
+
+---
+
+# Accessing Tuple Elements (Indexing)
+
+```python
+fruits = ("Apple", "Banana", "Mango", "Orange")
+
+print(fruits[0])
+print(fruits[2])
+print(fruits[-1])
+```
+
+**Output**
+
+```
+Apple
+Mango
+Orange
+```
+
+---
+
+# Slicing a Tuple
+
+```python
+numbers = (10, 20, 30, 40, 50)
+
+print(numbers[1:4])
+print(numbers[:3])
+print(numbers[2:])
+```
+
+**Output**
+
+```
+(20, 30, 40)
+(10, 20, 30)
+(30, 40, 50)
+```
+
+---
+
+# Tuple is Immutable
+
+```python
+fruits = ("Apple", "Banana", "Mango")
+
+# fruits[1] = "Orange"   # Error
+
+print(fruits)
+```
+
+**Output**
+
+```
+TypeError: 'tuple' object does not support item assignment
+```
+
+---
+
+# Tuple Methods
+
+## count()
+
+Counts how many times an element appears.
+
+```python
+numbers = (10, 20, 30, 20, 20)
+
+print(numbers.count(20))
+```
+
+**Output**
+
+```
+3
+```
+
+---
+
+## index()
+
+Returns the index of the first occurrence.
+
+```python
+numbers = (10, 20, 30, 40)
+
+print(numbers.index(30))
+```
+
+**Output**
+
+```
+2
+```
+
+---
+
+# Built-in Functions
+
+```python
+numbers = (10, 20, 30, 40, 50)
+
+print(len(numbers))
+print(max(numbers))
+print(min(numbers))
+print(sum(numbers))
+```
+
+**Output**
+
+```
+5
+50
+10
+150
+```
+
+---
+
+# Loop Through a Tuple
+
+```python
+fruits = ("Apple", "Banana", "Mango")
+
+for fruit in fruits:
+    print(fruit)
+```
+
+---
+
+# Check if an Element Exists
+
+```python
+fruits = ("Apple", "Banana", "Mango")
+
+if "Banana" in fruits:
+    print("Found")
+```
+
+**Output**
+
+```
+Found
+```
+
+---
+
+# Convert Tuple to List
+
+```python
+numbers = (10, 20, 30)
+
+numbers_list = list(numbers)
+
+print(numbers_list)
+```
+
+**Output**
+
+```
+[10, 20, 30]
+```
+
+---
+
+# Convert List to Tuple
+
+```python
+numbers = [10, 20, 30]
+
+numbers_tuple = tuple(numbers)
+
+print(numbers_tuple)
+```
+
+**Output**
+
+```
+(10, 20, 30)
+```
+
+---
+
+# Concatenate Tuples
+
+```python
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+
+tuple3 = tuple1 + tuple2
+
+print(tuple3)
+```
+
+**Output**
+
+```
+(1, 2, 3, 4, 5, 6)
+```
+
+---
+
+# Repeat a Tuple
+
+```python
+numbers = (1, 2)
+
+print(numbers * 3)
+```
+
+**Output**
+
+```
+(1, 2, 1, 2, 1, 2)
+```
+
+---
+
+# Nested Tuple
+
+```python
+matrix = (
+    (1, 2, 3),
+    (4, 5, 6)
+)
+
+print(matrix[1][2])
+```
+
+**Output**
+
+```
+6
+```
+
+---
+
+# Common Tuple Functions
+
+| Function | Description |
+|----------|-------------|
+| `count()` | Counts occurrences of an element |
+| `index()` | Returns the index of an element |
+| `len()` | Returns the number of elements |
+| `max()` | Returns the largest element |
+| `min()` | Returns the smallest element |
+| `sum()` | Returns the sum of numeric elements |
+| `tuple()` | Converts an iterable into a tuple |
+| `list()` | Converts a tuple into a list |
+
+---
+
+# Practice Problems
+
+## Easy
+
+1. Create a tuple of five numbers.
+2. Print the first and last element.
+3. Print the third element.
+4. Find the length of a tuple.
+5. Count the occurrences of an element.
+6. Find the index of an element.
+7. Check whether an element exists.
+8. Print all elements using a loop.
+9. Find the maximum value.
+10. Find the minimum value.
+
+---
+
+## Intermediate
+
+11. Find the sum of all elements.
+12. Find the average of all elements.
+13. Convert a tuple into a list.
+14. Convert a list into a tuple.
+15. Concatenate two tuples.
+16. Repeat a tuple three times.
+17. Create a nested tuple and access an element.
+18. Count duplicate elements in a tuple.
+19. Find the second largest element in a tuple.
+20. Remove duplicates by converting the tuple to a set.
+
+---
+
+# Summary
+
+- **Tuple** is an ordered and immutable collection.
+- Tuples allow duplicate values.
+- Tuples support indexing, slicing, and looping.
+- Once created, tuple elements cannot be modified.
+- Common methods are `count()` and `index()`.
+- Tuples are faster than lists and are often used for fixed data that should not change.

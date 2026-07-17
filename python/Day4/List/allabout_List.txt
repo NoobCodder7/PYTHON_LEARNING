@@ -1,0 +1,417 @@
+# Python List
+
+A **List** is an ordered, mutable (changeable) collection that allows duplicate values. It is one of the most commonly used data types in Python.
+
+---
+
+# Features of List
+
+- Ordered (maintains insertion order)
+- Mutable (elements can be changed)
+- Allows duplicate values
+- Can store different data types
+- Supports indexing and slicing
+
+---
+
+# Syntax
+
+```python
+list_name = [value1, value2, value3]
+```
+
+---
+
+# Creating a List
+
+```python
+fruits = ["Apple", "Banana", "Mango"]
+print(fruits)
+```
+
+**Output**
+
+```
+['Apple', 'Banana', 'Mango']
+```
+
+---
+
+# List with Different Data Types
+
+```python
+data = [10, "Python", 3.14, True]
+
+print(data)
+```
+
+**Output**
+
+```
+[10, 'Python', 3.14, True]
+```
+
+---
+
+# Accessing List Elements (Indexing)
+
+```python
+fruits = ["Apple", "Banana", "Mango", "Orange"]
+
+print(fruits[0])
+print(fruits[2])
+print(fruits[-1])
+```
+
+**Output**
+
+```
+Apple
+Mango
+Orange
+```
+
+---
+
+# Slicing a List
+
+```python
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[1:4])
+print(numbers[:3])
+print(numbers[2:])
+```
+
+**Output**
+
+```
+[20, 30, 40]
+[10, 20, 30]
+[30, 40, 50]
+```
+
+---
+
+# Modifying a List
+
+```python
+fruits = ["Apple", "Banana", "Mango"]
+
+fruits[1] = "Orange"
+
+print(fruits)
+```
+
+**Output**
+
+```
+['Apple', 'Orange', 'Mango']
+```
+
+---
+
+# Adding Elements
+
+## append()
+
+Adds an element at the end.
+
+```python
+numbers = [10, 20, 30]
+
+numbers.append(40)
+
+print(numbers)
+```
+
+**Output**
+
+```
+[10, 20, 30, 40]
+```
+
+---
+
+## insert()
+
+Adds an element at a specific index.
+
+```python
+numbers = [10, 20, 30]
+
+numbers.insert(1, 15)
+
+print(numbers)
+```
+
+**Output**
+
+```
+[10, 15, 20, 30]
+```
+
+---
+
+## extend()
+
+Adds multiple elements.
+
+```python
+numbers = [10, 20]
+
+numbers.extend([30, 40, 50])
+
+print(numbers)
+```
+
+**Output**
+
+```
+[10, 20, 30, 40, 50]
+```
+
+---
+
+# Removing Elements
+
+## remove()
+
+Removes a specific value.
+
+```python
+numbers = [10, 20, 30]
+
+numbers.remove(20)
+
+print(numbers)
+```
+
+**Output**
+
+```
+[10, 30]
+```
+
+---
+
+## pop()
+
+Removes an element by index.
+
+```python
+numbers = [10, 20, 30]
+
+numbers.pop(1)
+
+print(numbers)
+```
+
+**Output**
+
+```
+[10, 30]
+```
+
+---
+
+## del
+
+Deletes an element or the entire list.
+
+```python
+numbers = [10, 20, 30]
+
+del numbers[1]
+
+print(numbers)
+```
+
+**Output**
+
+```
+[10, 30]
+```
+
+---
+
+## clear()
+
+Removes all elements.
+
+```python
+numbers = [10, 20, 30]
+
+numbers.clear()
+
+print(numbers)
+```
+
+**Output**
+
+```
+[]
+```
+
+---
+
+# List Methods
+
+```python
+numbers = [30, 10, 20, 40, 20]
+
+print(len(numbers))
+print(max(numbers))
+print(min(numbers))
+print(sum(numbers))
+print(numbers.count(20))
+
+numbers.sort()
+print(numbers)
+
+numbers.reverse()
+print(numbers)
+```
+
+---
+
+# Loop Through a List
+
+```python
+fruits = ["Apple", "Banana", "Mango"]
+
+for fruit in fruits:
+    print(fruit)
+```
+
+---
+
+# Check if an Element Exists
+
+```python
+fruits = ["Apple", "Banana", "Mango"]
+
+if "Banana" in fruits:
+    print("Found")
+```
+
+**Output**
+
+```
+Found
+```
+
+---
+
+# Copy a List
+
+```python
+list1 = [1, 2, 3]
+
+list2 = list1.copy()
+
+print(list2)
+```
+
+---
+
+# Concatenate Lists
+
+```python
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+
+list3 = list1 + list2
+
+print(list3)
+```
+
+**Output**
+
+```
+[1, 2, 3, 4, 5, 6]
+```
+
+---
+
+# Nested List
+
+```python
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+
+print(matrix[0][1])
+```
+
+**Output**
+
+```
+2
+```
+
+---
+
+# Common List Functions
+
+| Function | Description |
+|----------|-------------|
+| `append()` | Adds an element at the end |
+| `insert()` | Adds an element at a specific position |
+| `extend()` | Adds multiple elements |
+| `remove()` | Removes a specific value |
+| `pop()` | Removes an element by index |
+| `clear()` | Removes all elements |
+| `sort()` | Sorts the list |
+| `reverse()` | Reverses the list |
+| `copy()` | Creates a copy of the list |
+| `count()` | Counts occurrences of a value |
+| `index()` | Returns the index of an element |
+| `len()` | Returns the number of elements |
+| `max()` | Returns the largest element |
+| `min()` | Returns the smallest element |
+| `sum()` | Returns the sum of numeric elements |
+
+---
+
+# Practice Problems
+
+## Easy
+
+1. Create a list of five fruits.
+2. Print the first and last element.
+3. Add a new element using `append()`.
+4. Insert an element at index 2.
+5. Remove an element using `remove()`.
+6. Remove the last element using `pop()`.
+7. Find the length of a list.
+8. Check if an element exists in a list.
+9. Print all elements using a loop.
+10. Count the occurrences of an element.
+
+---
+
+## Intermediate
+
+11. Find the largest element in a list.
+12. Find the smallest element in a list.
+13. Find the sum of all elements.
+14. Find the average of all elements.
+15. Reverse a list.
+16. Sort a list in ascending order.
+17. Sort a list in descending order.
+18. Copy a list.
+19. Merge two lists.
+20. Remove duplicate elements from a list.
+
+---
+
+# Summary
+
+- **List** is an ordered and mutable collection.
+- Lists allow duplicate values.
+- Lists can store different data types.
+- Lists support indexing, slicing, and looping.
+- Lists provide many built-in methods for adding, removing, searching, sorting, and modifying elements.
+- Lists are one of the most frequently used data structures in Python and are widely used in data analysis, machine learning, automation, and coding interviews.    

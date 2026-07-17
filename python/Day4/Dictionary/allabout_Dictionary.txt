@@ -1,0 +1,333 @@
+# Python Dictionary
+
+A **Dictionary** is a collection of data stored as **key-value pairs**. Each key is unique and is used to access its corresponding value.
+
+---
+
+# Features of Dictionary
+
+- Stores data in **key-value pairs**
+- Mutable (can be modified)
+- Keys must be unique
+- Values can be duplicated
+- Ordered (Python 3.7+)
+- Access elements using keys instead of indexes
+
+---
+
+# Syntax
+
+```python
+dictionary_name = {
+    "key1": value1,
+    "key2": value2,
+    "key3": value3
+}
+```
+
+---
+
+# Creating a Dictionary
+
+```python
+student = {
+    "name": "Viraj",
+    "age": 20,
+    "course": "Python"
+}
+
+print(student)
+```
+
+**Output**
+
+```
+{'name': 'Viraj', 'age': 20, 'course': 'Python'}
+```
+
+---
+
+# Accessing Values
+
+```python
+student = {
+    "name": "Viraj",
+    "age": 20,
+    "course": "Python"
+}
+
+print(student["name"])
+print(student["age"])
+```
+
+**Output**
+
+```
+Viraj
+20
+```
+
+---
+
+# Using get()
+
+```python
+student = {
+    "name": "Viraj",
+    "age": 20
+}
+
+print(student.get("name"))
+```
+
+---
+
+# Adding a New Key-Value Pair
+
+```python
+student = {
+    "name": "Viraj",
+    "age": 20
+}
+
+student["city"] = "Mumbai"
+
+print(student)
+```
+
+---
+
+# Updating a Value
+
+```python
+student = {
+    "name": "Viraj",
+    "age": 20
+}
+
+student["age"] = 21
+
+print(student)
+```
+
+---
+
+# Removing Elements
+
+## pop()
+
+```python
+student = {
+    "name": "Viraj",
+    "age": 20,
+    "course": "Python"
+}
+
+student.pop("course")
+
+print(student)
+```
+
+---
+
+## del
+
+```python
+student = {
+    "name": "Viraj",
+    "age": 20
+}
+
+del student["age"]
+
+print(student)
+```
+
+---
+
+## clear()
+
+```python
+student = {
+    "name": "Viraj",
+    "age": 20
+}
+
+student.clear()
+
+print(student)
+```
+
+---
+
+# Dictionary Methods
+
+## keys()
+
+```python
+student = {
+    "name": "Viraj",
+    "age": 20,
+    "course": "Python"
+}
+
+print(student.keys())
+```
+
+---
+
+## values()
+
+```python
+print(student.values())
+```
+
+---
+
+## items()
+
+```python
+print(student.items())
+```
+
+---
+
+# Loop Through a Dictionary
+
+## Print Keys
+
+```python
+student = {
+    "name": "Viraj",
+    "age": 20,
+    "course": "Python"
+}
+
+for key in student:
+    print(key)
+```
+
+---
+
+## Print Values
+
+```python
+for value in student.values():
+    print(value)
+```
+
+---
+
+## Print Keys and Values
+
+```python
+for key, value in student.items():
+    print(key, ":", value)
+```
+
+---
+
+# Check if a Key Exists
+
+```python
+student = {
+    "name": "Viraj",
+    "age": 20
+}
+
+if "name" in student:
+    print("Key Found")
+```
+
+---
+
+# Copy a Dictionary
+
+```python
+student = {
+    "name": "Viraj",
+    "age": 20
+}
+
+new_student = student.copy()
+
+print(new_student)
+```
+
+---
+
+# Nested Dictionary
+
+```python
+students = {
+    "student1": {
+        "name": "Viraj",
+        "age": 20
+    },
+    "student2": {
+        "name": "Rahul",
+        "age": 21
+    }
+}
+
+print(students["student1"]["name"])
+```
+
+---
+
+# Common Dictionary Functions
+
+| Function | Description |
+|----------|-------------|
+| `get()` | Returns the value of a key |
+| `keys()` | Returns all keys |
+| `values()` | Returns all values |
+| `items()` | Returns all key-value pairs |
+| `pop()` | Removes a key |
+| `clear()` | Removes all items |
+| `copy()` | Creates a copy of the dictionary |
+| `update()` | Updates the dictionary |
+| `len()` | Returns the number of key-value pairs |
+
+---
+
+# Practice Problems
+
+## Easy
+
+1. Create a dictionary for a student.
+2. Print the value of a key.
+3. Add a new key-value pair.
+4. Update an existing value.
+5. Remove a key using `pop()`.
+6. Remove a key using `del`.
+7. Print all keys.
+8. Print all values.
+9. Print all key-value pairs using a loop.
+10. Check whether a key exists.
+
+---
+
+## Intermediate
+
+11. Count the number of key-value pairs.
+12. Copy a dictionary.
+13. Clear a dictionary.
+14. Create a nested dictionary.
+15. Access a value from a nested dictionary.
+16. Merge two dictionaries.
+17. Find the maximum value in a dictionary.
+18. Find the minimum value in a dictionary.
+19. Find the sum of all values in a dictionary.
+20. Create a dictionary from two lists.
+
+---
+
+# Summary
+
+- A **Dictionary** stores data as **key-value pairs**.
+- Keys must be unique.
+- Dictionaries are mutable.
+- Elements are accessed using keys.
+- Common methods include `get()`, `keys()`, `values()`, `items()`, `pop()`, `copy()`, `update()`, and `clear()`.
+- Dictionaries are widely used to store structured data such as student records, employee details, product information, and API responses.

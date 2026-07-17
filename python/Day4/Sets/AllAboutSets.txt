@@ -1,0 +1,355 @@
+# Python Set
+
+A **Set** is an unordered, mutable collection that stores **unique** elements. Sets automatically remove duplicate values and are commonly used for membership testing, removing duplicates, and mathematical set operations.
+
+---
+
+# Features of Set
+
+- Unordered (no indexing)
+- Mutable (can add or remove elements)
+- Does not allow duplicate values
+- Can store different data types
+- Fast membership testing (`in` keyword)
+
+---
+
+# Syntax
+
+```python
+set_name = {value1, value2, value3}
+```
+
+---
+
+# Creating a Set
+
+```python
+fruits = {"Apple", "Banana", "Mango"}
+
+print(fruits)
+```
+
+**Output**
+
+```
+{'Apple', 'Banana', 'Mango'}
+```
+
+---
+
+# Duplicate Values
+
+```python
+numbers = {10, 20, 20, 30, 40, 40}
+
+print(numbers)
+```
+
+**Output**
+
+```
+{10, 20, 30, 40}
+```
+
+---
+
+# Empty Set
+
+```python
+numbers = set()
+
+print(type(numbers))
+```
+
+**Output**
+
+```
+<class 'set'>
+```
+
+> **Note:** `{}` creates an empty dictionary, not a set.
+
+---
+
+# Adding Elements
+
+## add()
+
+```python
+numbers = {10, 20, 30}
+
+numbers.add(40)
+
+print(numbers)
+```
+
+---
+
+## update()
+
+```python
+numbers = {10, 20}
+
+numbers.update([30, 40, 50])
+
+print(numbers)
+```
+
+---
+
+# Removing Elements
+
+## remove()
+
+```python
+numbers = {10, 20, 30}
+
+numbers.remove(20)
+
+print(numbers)
+```
+
+---
+
+## discard()
+
+```python
+numbers = {10, 20, 30}
+
+numbers.discard(40)
+
+print(numbers)
+```
+
+> `discard()` does not give an error if the element is not present.
+
+---
+
+## pop()
+
+```python
+numbers = {10, 20, 30}
+
+removed = numbers.pop()
+
+print("Removed:", removed)
+print(numbers)
+```
+
+> Since sets are unordered, `pop()` removes a random element.
+
+---
+
+## clear()
+
+```python
+numbers = {10, 20, 30}
+
+numbers.clear()
+
+print(numbers)
+```
+
+---
+
+# Loop Through a Set
+
+```python
+fruits = {"Apple", "Banana", "Mango"}
+
+for fruit in fruits:
+    print(fruit)
+```
+
+---
+
+# Check if an Element Exists
+
+```python
+fruits = {"Apple", "Banana", "Mango"}
+
+if "Banana" in fruits:
+    print("Found")
+```
+
+---
+
+# Copy a Set
+
+```python
+set1 = {1, 2, 3}
+
+set2 = set1.copy()
+
+print(set2)
+```
+
+---
+
+# Set Operations
+
+## Union
+
+```python
+A = {1, 2, 3}
+B = {3, 4, 5}
+
+print(A | B)
+```
+
+**Output**
+
+```
+{1, 2, 3, 4, 5}
+```
+
+---
+
+## Intersection
+
+```python
+A = {1, 2, 3}
+B = {3, 4, 5}
+
+print(A & B)
+```
+
+**Output**
+
+```
+{3}
+```
+
+---
+
+## Difference
+
+```python
+A = {1, 2, 3}
+B = {3, 4, 5}
+
+print(A - B)
+```
+
+**Output**
+
+```
+{1, 2}
+```
+
+---
+
+## Symmetric Difference
+
+```python
+A = {1, 2, 3}
+B = {3, 4, 5}
+
+print(A ^ B)
+```
+
+**Output**
+
+```
+{1, 2, 4, 5}
+```
+
+---
+
+# Built-in Functions
+
+```python
+numbers = {10, 20, 30, 40}
+
+print(len(numbers))
+print(max(numbers))
+print(min(numbers))
+print(sum(numbers))
+```
+
+---
+
+# Convert List to Set
+
+```python
+numbers = [10, 20, 20, 30, 40, 40]
+
+unique = set(numbers)
+
+print(unique)
+```
+
+---
+
+# Convert Set to List
+
+```python
+numbers = {10, 20, 30}
+
+numbers_list = list(numbers)
+
+print(numbers_list)
+```
+
+---
+
+# Common Set Methods
+
+| Method | Description |
+|---------|-------------|
+| `add()` | Adds one element |
+| `update()` | Adds multiple elements |
+| `remove()` | Removes an element (Error if not found) |
+| `discard()` | Removes an element (No error if not found) |
+| `pop()` | Removes a random element |
+| `clear()` | Removes all elements |
+| `copy()` | Copies a set |
+| `union()` | Combines two sets |
+| `intersection()` | Finds common elements |
+| `difference()` | Finds different elements |
+| `symmetric_difference()` | Finds non-common elements |
+| `len()` | Returns number of elements |
+
+---
+
+# Practice Problems
+
+## Easy
+
+1. Create a set of five numbers.
+2. Add an element using `add()`.
+3. Add multiple elements using `update()`.
+4. Remove an element using `remove()`.
+5. Remove an element using `discard()`.
+6. Remove a random element using `pop()`.
+7. Print all elements using a loop.
+8. Check whether an element exists in a set.
+9. Find the length of a set.
+10. Copy a set.
+
+---
+
+## Intermediate
+
+11. Find the union of two sets.
+12. Find the intersection of two sets.
+13. Find the difference of two sets.
+14. Find the symmetric difference of two sets.
+15. Find the maximum element.
+16. Find the minimum element.
+17. Find the sum of all elements.
+18. Remove duplicates from a list using a set.
+19. Convert a set into a list.
+20. Clear all elements from a set.
+
+---
+
+# Summary
+
+- A **Set** is an unordered collection of unique elements.
+- Sets automatically remove duplicate values.
+- Sets do not support indexing or slicing.
+- Sets are mutable, so elements can be added or removed.
+- Sets are commonly used for removing duplicates and performing mathematical set operations like union, intersection, difference, and symmetric difference.
+- Common methods include `add()`, `update()`, `remove()`, `discard()`, `pop()`, `copy()`, `clear()`, `union()`, `intersection()`, and `difference()`.
