@@ -1,0 +1,349 @@
+# Python Functions
+
+A **function** is a block of reusable code that performs a specific task. Functions help make programs more organized, reusable, and easier to maintain.
+
+---
+
+# Advantages of Functions
+
+- Avoids code repetition
+- Makes code reusable
+- Improves readability
+- Makes debugging easier
+- Breaks large programs into smaller modules
+
+---
+
+# Syntax
+
+```python
+def function_name():
+    # Code
+```
+
+---
+
+# Calling a Function
+
+```python
+def greet():
+    print("Welcome to Python!")
+
+greet()
+```
+
+**Output**
+
+```
+Welcome to Python!
+```
+
+---
+
+# Function with Parameters
+
+Parameters are variables passed into a function.
+
+```python
+def greet(name):
+    print("Hello", name)
+
+greet("Viraj")
+```
+
+**Output**
+
+```
+Hello Viraj
+```
+
+---
+
+# Function with Multiple Parameters
+
+```python
+def add(a, b):
+    print(a + b)
+
+add(10, 20)
+```
+
+**Output**
+
+```
+30
+```
+
+---
+
+# Function with Return Statement
+
+The `return` keyword sends a value back to the caller.
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(10, 20)
+
+print(result)
+```
+
+**Output**
+
+```
+30
+```
+
+---
+
+# Function Without Return
+
+```python
+def message():
+    print("Python is easy.")
+
+message()
+```
+
+---
+
+# Default Parameters
+
+```python
+def greet(name="Guest"):
+    print("Hello", name)
+
+greet()
+greet("Viraj")
+```
+
+**Output**
+
+```
+Hello Guest
+Hello Viraj
+```
+
+---
+
+# Keyword Arguments
+
+```python
+def student(name, age):
+    print(name, age)
+
+student(age=20, name="Viraj")
+```
+
+---
+
+# Positional Arguments
+
+```python
+def student(name, age):
+    print(name, age)
+
+student("Viraj", 20)
+```
+
+---
+
+# Variable-Length Arguments (*args)
+
+Used when the number of arguments is unknown.
+
+```python
+def total(*numbers):
+    print(sum(numbers))
+
+total(10, 20, 30, 40)
+```
+
+**Output**
+
+```
+100
+```
+
+---
+
+# Keyword Variable-Length Arguments (**kwargs)
+
+```python
+def details(**student):
+    print(student)
+
+details(name="Viraj", age=20, course="Python")
+```
+
+---
+
+# Local Variable
+
+```python
+def demo():
+    x = 10
+    print(x)
+
+demo()
+```
+
+---
+
+# Global Variable
+
+```python
+x = 100
+
+def demo():
+    print(x)
+
+demo()
+```
+
+---
+
+# Lambda Function
+
+A lambda function is an anonymous one-line function.
+
+```python
+square = lambda x: x * x
+
+print(square(5))
+```
+
+**Output**
+
+```
+25
+```
+
+---
+
+# Recursive Function
+
+A function that calls itself.
+
+```python
+def countdown(n):
+    if n == 0:
+        return
+    print(n)
+    countdown(n - 1)
+
+countdown(5)
+```
+
+**Output**
+
+```
+5
+4
+3
+2
+1
+```
+
+---
+
+# Built-in Functions
+
+```python
+numbers = [10, 20, 30]
+
+print(len(numbers))
+print(max(numbers))
+print(min(numbers))
+print(sum(numbers))
+```
+
+---
+
+# Scope of Variables
+
+## Local Scope
+
+```python
+def test():
+    x = 50
+    print(x)
+
+test()
+```
+
+---
+
+## Global Scope
+
+```python
+x = 100
+
+def test():
+    print(x)
+
+test()
+```
+
+---
+
+# Practice Problems
+
+## Easy
+
+1. Create a function that prints "Hello World".
+2. Create a function to print your name.
+3. Create a function to add two numbers.
+4. Create a function to subtract two numbers.
+5. Create a function to multiply two numbers.
+6. Create a function to divide two numbers.
+7. Create a function to find the square of a number.
+8. Create a function to find the cube of a number.
+9. Create a function to check whether a number is even or odd.
+10. Create a function to find the largest of two numbers.
+
+---
+
+## Intermediate
+
+11. Create a function to find the factorial of a number.
+12. Create a function to check whether a number is prime.
+13. Create a function to print the Fibonacci series.
+14. Create a function to find the sum of a list.
+15. Create a function to find the maximum element in a list.
+16. Create a function to count vowels in a string.
+17. Create a function to reverse a string.
+18. Create a function to check whether a string is a palindrome.
+19. Create a function using `*args` to find the sum of numbers.
+20. Create a function using `**kwargs` to print student details.
+
+---
+
+# Challenge Problems
+
+1. Create a calculator using functions.
+2. Create a menu-driven banking system using functions.
+3. Create an ATM program using functions.
+4. Create a student report card generator using functions.
+5. Create a password generator function.
+6. Create a function to remove duplicates from a list.
+7. Create a function to merge two dictionaries.
+8. Create a recursive function to calculate factorial.
+9. Create a recursive Fibonacci function.
+10. Build a mini library management system using functions.
+
+---
+
+# Summary
+
+- Functions are reusable blocks of code.
+- `def` is used to define a function.
+- Functions can accept parameters.
+- `return` sends a value back.
+- Default parameters provide default values.
+- `*args` accepts multiple positional arguments.
+- `**kwargs` accepts multiple keyword arguments.
+- Lambda functions are one-line anonymous functions.
+- Recursive functions call themselves.
+- Functions make code modular, reusable, and easier to maintain.
