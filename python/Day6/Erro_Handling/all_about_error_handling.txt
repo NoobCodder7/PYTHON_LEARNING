@@ -1,0 +1,305 @@
+# Python Exception Handling
+
+## What is Exception Handling?
+
+An **exception** is an error that occurs while a program is running. If not handled, the program stops immediately.
+
+**Exception Handling** allows us to handle these errors gracefully so that the program continues to run instead of crashing.
+
+---
+
+# Why Use Exception Handling?
+
+- Prevents the program from crashing
+- Handles unexpected errors
+- Improves user experience
+- Makes programs more reliable
+- Helps in debugging
+
+---
+
+# Common Exceptions
+
+| Exception | Description |
+|-----------|-------------|
+| `ZeroDivisionError` | Dividing by zero |
+| `ValueError` | Invalid input type |
+| `TypeError` | Unsupported operation between data types |
+| `NameError` | Variable not defined |
+| `IndexError` | Invalid list index |
+| `KeyError` | Dictionary key not found |
+| `FileNotFoundError` | File does not exist |
+
+---
+
+# Basic try-except
+
+### Syntax
+
+```python
+try:
+    # Code that may cause an error
+except:
+    # Code to handle the error
+```
+
+### Example
+
+```python
+try:
+    num = int(input("Enter a number: "))
+    print(10 / num)
+except:
+    print("An error occurred.")
+```
+
+---
+
+# Handling Specific Exceptions
+
+```python
+try:
+    num = int(input("Enter a number: "))
+    print(10 / num)
+
+except ValueError:
+    print("Please enter a valid number.")
+
+except ZeroDivisionError:
+    print("Division by zero is not allowed.")
+```
+
+---
+
+# try-except-else
+
+The `else` block executes only if no exception occurs.
+
+```python
+try:
+    num = int(input("Enter a number: "))
+    result = 10 / num
+
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+
+else:
+    print("Result:", result)
+```
+
+---
+
+# try-except-finally
+
+The `finally` block always executes, whether an exception occurs or not.
+
+```python
+try:
+    file = open("sample.txt")
+
+except FileNotFoundError:
+    print("File not found.")
+
+finally:
+    print("Program Finished.")
+```
+
+---
+
+# Complete Example
+
+```python
+try:
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+
+    print("Result:", a / b)
+
+except ValueError:
+    print("Only numbers are allowed.")
+
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+
+finally:
+    print("Thank you!")
+```
+
+---
+
+# Catch Multiple Exceptions Together
+
+```python
+try:
+    num = int(input("Enter a number: "))
+    print(100 / num)
+
+except (ValueError, ZeroDivisionError):
+    print("Invalid input.")
+```
+
+---
+
+# Exception as an Object
+
+```python
+try:
+    num = int(input("Enter a number: "))
+    print(10 / num)
+
+except Exception as e:
+    print("Error:", e)
+```
+
+---
+
+# Raising Exceptions
+
+Use `raise` to create your own exception.
+
+```python
+age = int(input("Enter your age: "))
+
+if age < 18:
+    raise ValueError("Age must be at least 18.")
+
+print("Eligible")
+```
+
+---
+
+# User-Defined Exception
+
+```python
+class NegativeNumberError(Exception):
+    pass
+
+num = int(input("Enter a number: "))
+
+if num < 0:
+    raise NegativeNumberError("Negative numbers are not allowed.")
+```
+
+---
+
+# Common Exception Examples
+
+## ZeroDivisionError
+
+```python
+try:
+    print(10 / 0)
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+```
+
+---
+
+## ValueError
+
+```python
+try:
+    age = int(input("Enter age: "))
+except ValueError:
+    print("Please enter numbers only.")
+```
+
+---
+
+## IndexError
+
+```python
+numbers = [10, 20, 30]
+
+try:
+    print(numbers[5])
+except IndexError:
+    print("Index out of range.")
+```
+
+---
+
+## KeyError
+
+```python
+student = {"name": "Viraj"}
+
+try:
+    print(student["age"])
+except KeyError:
+    print("Key not found.")
+```
+
+---
+
+## FileNotFoundError
+
+```python
+try:
+    file = open("data.txt")
+except FileNotFoundError:
+    print("File does not exist.")
+```
+
+---
+
+# Practice Problems
+
+## Easy
+
+1. Handle division by zero.
+2. Handle invalid integer input.
+3. Handle an invalid list index.
+4. Handle a missing dictionary key.
+5. Handle a missing file.
+6. Print a custom message using `finally`.
+7. Use `else` when no exception occurs.
+8. Catch multiple exceptions in one `except`.
+9. Print the exception using `Exception as e`.
+10. Raise a `ValueError` if age is less than 18.
+
+---
+
+## Intermediate
+
+11. Create a calculator with exception handling.
+12. Build an ATM program with exception handling.
+13. Build a student marks calculator with exception handling.
+14. Read a file safely using `try-except`.
+15. Validate user input until a valid number is entered.
+16. Raise a custom exception for negative numbers.
+17. Handle multiple different exceptions in one program.
+18. Build a login system with input validation.
+19. Create a menu-driven application with exception handling.
+20. Build a number guessing game with proper error handling.
+
+---
+
+# Mini Projects
+
+### Project 1
+Calculator with Exception Handling
+
+### Project 2
+ATM System with Exception Handling
+
+### Project 3
+Student Marks Calculator
+
+### Project 4
+Safe File Reader
+
+### Project 5
+Login System with Input Validation
+
+---
+
+# Summary
+
+- **try** → Code that may generate an exception.
+- **except** → Handles the exception.
+- **else** → Executes if no exception occurs.
+- **finally** → Always executes.
+- **raise** → Creates a custom exception.
+- **Exception as e** → Displays the actual error message.
+- Exception handling prevents programs from crashing and makes them more reliable.
