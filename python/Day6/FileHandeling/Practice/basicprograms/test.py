@@ -1,0 +1,8 @@
+import os
+
+print(os.getcwd())
+file = open("text.txt", "r")
+
+print(file.read())
+
+file.close()
