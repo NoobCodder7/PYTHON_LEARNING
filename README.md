@@ -74,7 +74,6 @@ Python-Learning/
 ├── exceptions/
 ├── modules/
 ├── libraries/
-├── projects/
 └── README.md
 ```
 
@@ -111,7 +110,6 @@ python filename.py
 ## 💡 Learning Resources
 
 - Python Official Documentation: https://docs.python.org/3/
-- Real Python: https://realpython.com/
 - W3Schools Python Tutorial: https://www.w3schools.com/python/
 - GeeksforGeeks Python: https://www.geeksforgeeks.org/python-programming-language/
 
