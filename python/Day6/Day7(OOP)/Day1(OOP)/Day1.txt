@@ -1,0 +1,355 @@
+# 📘 Day 1 - Introduction to Object-Oriented Programming (OOP) in Python
+
+> "A strong foundation makes advanced concepts easier to learn."
+
+This repository contains my Day 1 learning of **Object-Oriented Programming (OOP) in Python**. Along with code examples, this README serves as my personal revision notes.
+
+---
+
+# 📖 What is OOP?
+
+Object-Oriented Programming (OOP) is a programming paradigm that organizes code using **objects** instead of only functions and variables.
+
+In OOP, we combine:
+
+- **Data (Attributes/Properties)**
+- **Behavior (Methods/Functions)**
+
+into a single unit called an **Object**.
+
+OOP helps us write code that is:
+
+- Organized
+- Reusable
+- Easy to maintain
+- Easy to scale
+
+---
+
+# 🤔 Why Do We Need OOP?
+
+Imagine storing information for 500 students.
+
+Without OOP, you would create hundreds of variables:
+
+```python
+student1_name = "Viraj"
+student1_age = 20
+
+student2_name = "Rahul"
+student2_age = 21
+```
+
+Managing this becomes difficult.
+
+Instead, OOP lets us create a **template** called a **Class** and create as many student objects as needed.
+
+---
+
+# 🏗️ What is a Class?
+
+A **Class** is a blueprint or template used to create objects.
+
+It defines:
+
+- What data an object will have
+- What actions an object can perform
+
+### Example
+
+Think of an architectural blueprint.
+
+The blueprint itself is **not** a house.
+
+It simply describes how houses should be built.
+
+Similarly,
+
+A class is not an object.
+
+It is only a design.
+
+---
+
+## Syntax
+
+```python
+class Student:
+    pass
+```
+
+Here,
+
+- `class` → keyword used to create a class
+- `Student` → class name
+- `pass` → placeholder because the class is empty
+
+---
+
+# 📦 What is an Object?
+
+An **Object** is a real instance of a class.
+
+Example:
+
+```python
+student1 = Student()
+```
+
+Here,
+
+`student1`
+
+is an object created from the `Student` class.
+
+You can create multiple objects from the same class.
+
+Example:
+
+```python
+student1 = Student()
+student2 = Student()
+student3 = Student()
+```
+
+Each object is different.
+
+---
+
+# 🍪 Real-Life Analogy
+
+Imagine a cookie cutter.
+
+**Cookie Cutter**
+
+↓
+
+Class
+
+**Cookies**
+
+↓
+
+Objects
+
+One cookie cutter can make hundreds of cookies.
+
+Similarly,
+
+One class can create hundreds of objects.
+
+---
+
+# 📝 Class vs Object
+
+| Class | Object |
+|--------|--------|
+| Blueprint | Real instance |
+| Template | Created from template |
+| Defines properties | Stores actual data |
+| Used to create objects | Represents a real entity |
+
+---
+
+# 🔹 The `pass` Keyword
+
+Python does not allow an empty class.
+
+So we use:
+
+```python
+class Student:
+    pass
+```
+
+The `pass` statement tells Python:
+
+> "I'm leaving this empty for now."
+
+---
+
+# 🔹 Creating Objects
+
+Syntax
+
+```python
+object_name = ClassName()
+```
+
+Example
+
+```python
+class Car:
+    pass
+
+car1 = Car()
+car2 = Car()
+```
+
+Here,
+
+Two different objects are created.
+
+---
+
+# 🔹 Multiple Objects
+
+One class can create many objects.
+
+Example
+
+```python
+class Dog:
+    pass
+
+dog1 = Dog()
+dog2 = Dog()
+dog3 = Dog()
+```
+
+Objects:
+
+- dog1
+- dog2
+- dog3
+
+All belong to the same class.
+
+---
+
+# 🔹 Object References
+
+Example
+
+```python
+class Pen:
+    pass
+
+p1 = Pen()
+p2 = p1
+```
+
+Many beginners think there are two objects.
+
+Actually,
+
+There is only **one object**.
+
+Both variables point to the same object.
+
+```
+p1 ───────► Object ◄─────── p2
+```
+
+---
+
+# 🔹 Using `type()`
+
+The `type()` function tells us the type of an object.
+
+Example
+
+```python
+class Student:
+    pass
+
+s1 = Student()
+
+print(type(s1))
+```
+
+Output
+
+```
+<class '__main__.Student'>
+```
+
+If we check the class itself:
+
+```python
+print(type(Student))
+```
+
+Output
+
+```
+<class 'type'>
+```
+
+Reason:
+
+- `Student` is a class.
+- `s1` is an object (instance) of that class.
+
+---
+
+# 📌 Important Points
+
+- A class is a blueprint.
+- An object is an instance of a class.
+- One class can create multiple objects.
+- Multiple variables can refer to the same object.
+- `pass` is a placeholder.
+- `type()` helps identify classes and objects.
+
+---
+
+# 💻 Topics Practiced Today
+
+- Creating classes
+- Creating objects
+- Multiple objects
+- Printing objects
+- Using `type()`
+- Understanding object references
+
+---
+
+# 📂 Repository Structure
+
+```
+Day-1-OOP/
+│
+├── examples.py
+├── practice_questions.py
+├── challenge_questions.py
+└── README.md
+```
+
+---
+
+# 🎯 Key Takeaways
+
+✅ Understood what OOP is.
+
+✅ Learned the difference between a class and an object.
+
+✅ Created multiple classes and objects.
+
+✅ Learned why `pass` is used.
+
+✅ Understood object references.
+
+✅ Used the `type()` function to inspect objects.
+
+---
+
+# 🚀 Next Topic
+
+In **Day 2**, I'll learn:
+
+- Constructors (`__init__`)
+- `self` keyword
+- Instance Attributes
+- Methods
+- Building useful classes
+
+---
+
+## 📖 Quote of the Day
+
+> "A class is just a blueprint. An object is what brings that blueprint to life."
+
+---
+
+### ⭐ If you found this repository helpful, consider giving it a star!
