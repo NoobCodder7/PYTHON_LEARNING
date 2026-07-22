@@ -1,0 +1,354 @@
+# Python File Handling
+
+## What is File Handling?
+
+**File Handling** allows a Python program to create, read, write, update, and delete files stored on your computer. It helps store data permanently instead of losing it when the program ends.
+
+---
+
+# Why Use File Handling?
+
+- Store data permanently
+- Read data from files
+- Write reports or logs
+- Save user information
+- Work with CSV, text, and other file formats
+
+---
+
+# Opening a File
+
+Use the `open()` function.
+
+### Syntax
+
+```python
+file = open("filename.txt", "mode")
+```
+
+---
+
+# File Modes
+
+| Mode | Description |
+|------|-------------|
+| `"r"` | Read a file (default) |
+| `"w"` | Write to a file (overwrites existing content) |
+| `"a"` | Append data to a file |
+| `"x"` | Create a new file (fails if file exists) |
+| `"r+"` | Read and write |
+| `"w+"` | Write and read |
+| `"a+"` | Append and read |
+| `"rb"` | Read a binary file |
+| `"wb"` | Write a binary file |
+
+---
+
+# Reading a File
+
+## read()
+
+Reads the entire file.
+
+```python
+file = open("sample.txt", "r")
+
+print(file.read())
+
+file.close()
+```
+
+---
+
+## readline()
+
+Reads one line at a time.
+
+```python
+file = open("sample.txt", "r")
+
+print(file.readline())
+print(file.readline())
+
+file.close()
+```
+
+---
+
+## readlines()
+
+Reads all lines into a list.
+
+```python
+file = open("sample.txt", "r")
+
+lines = file.readlines()
+
+print(lines)
+
+file.close()
+```
+
+---
+
+# Writing to a File
+
+## write()
+
+Creates or overwrites a file.
+
+```python
+file = open("sample.txt", "w")
+
+file.write("Hello Python!")
+
+file.close()
+```
+
+---
+
+# Appending to a File
+
+## append()
+
+Adds new content without deleting existing content.
+
+```python
+file = open("sample.txt", "a")
+
+file.write("\nWelcome to File Handling.")
+
+file.close()
+```
+
+---
+
+# Using `with` Statement
+
+The `with` statement automatically closes the file.
+
+```python
+with open("sample.txt", "r") as file:
+    print(file.read())
+```
+
+---
+
+# Creating a New File
+
+```python
+file = open("newfile.txt", "x")
+
+file.close()
+```
+
+---
+
+# Check if a File Exists
+
+```python
+import os
+
+if os.path.exists("sample.txt"):
+    print("File Exists")
+else:
+    print("File Not Found")
+```
+
+---
+
+# Delete a File
+
+```python
+import os
+
+os.remove("sample.txt")
+```
+
+---
+
+# Delete a Folder
+
+```python
+import os
+
+os.rmdir("Python")
+```
+
+---
+
+# File Pointer
+
+## tell()
+
+Returns the current cursor position.
+
+```python
+file = open("sample.txt", "r")
+
+print(file.tell())
+
+file.close()
+```
+
+---
+
+## seek()
+
+Moves the cursor to a specific position.
+
+```python
+file = open("sample.txt", "r")
+
+file.seek(5)
+
+print(file.read())
+
+file.close()
+```
+
+---
+
+# Reading File Line by Line
+
+```python
+with open("sample.txt", "r") as file:
+    for line in file:
+        print(line.strip())
+```
+
+---
+
+# Writing Multiple Lines
+
+```python
+lines = [
+    "Python\n",
+    "Java\n",
+    "C++\n"
+]
+
+with open("sample.txt", "w") as file:
+    file.writelines(lines)
+```
+
+---
+
+# Exception Handling with Files
+
+```python
+try:
+    with open("sample.txt", "r") as file:
+        print(file.read())
+
+except FileNotFoundError:
+    print("File not found.")
+```
+
+---
+
+# Working with CSV Files
+
+```python
+import csv
+
+with open("students.csv", "w", newline="") as file:
+    writer = csv.writer(file)
+
+    writer.writerow(["Name", "Marks"])
+    writer.writerow(["Viraj", 95])
+    writer.writerow(["Rahul", 88])
+```
+
+---
+
+# Reading a CSV File
+
+```python
+import csv
+
+with open("students.csv", "r") as file:
+    reader = csv.reader(file)
+
+    for row in reader:
+        print(row)
+```
+
+---
+
+# Common File Methods
+
+| Method | Description |
+|---------|-------------|
+| `read()` | Reads the whole file |
+| `readline()` | Reads one line |
+| `readlines()` | Reads all lines into a list |
+| `write()` | Writes text |
+| `writelines()` | Writes multiple lines |
+| `close()` | Closes the file |
+| `tell()` | Returns current cursor position |
+| `seek()` | Moves the cursor |
+
+---
+
+# Practice Problems
+
+## Easy
+
+1. Create a text file and write your name.
+2. Read the contents of a file.
+3. Append a new line to a file.
+4. Read the first line of a file.
+5. Read all lines using `readlines()`.
+6. Print a file line by line.
+7. Check whether a file exists.
+8. Create a new file using `"x"` mode.
+9. Find the current file pointer position using `tell()`.
+10. Move the file pointer using `seek()`.
+
+---
+
+## Intermediate
+
+11. Copy the contents of one file into another.
+12. Count the number of lines in a file.
+13. Count the number of words in a file.
+14. Count the number of characters in a file.
+15. Replace a word in a file.
+16. Read a file using exception handling.
+17. Create a student record file.
+18. Store multiple names in a file.
+19. Create and read a CSV file.
+20. Build a simple notes application using file handling.
+
+---
+
+# Mini Projects
+
+### Project 1
+Student Record Management System
+
+### Project 2
+Notes App
+
+### Project 3
+Expense Tracker
+
+### Project 4
+To-Do List using Files
+
+### Project 5
+Contact Book using File Handling
+
+---
+
+# Summary
+
+- `open()` opens a file.
+- `read()`, `readline()`, and `readlines()` are used to read files.
+- `write()` overwrites file contents.
+- `append()` (`"a"` mode) adds new content without deleting existing data.
+- `with open()` is the recommended way to work with files because it automatically closes the file.
+- `tell()` returns the current cursor position.
+- `seek()` moves the cursor to a specific position.
+- File handling is essential for storing data permanently and is widely used in real-world Python applications.
