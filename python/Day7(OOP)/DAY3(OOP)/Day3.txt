@@ -1,0 +1,354 @@
+# 📘 Day 3 - Encapsulation in Python OOP
+
+> "Good software protects its data. Encapsulation is the first step toward writing secure and maintainable code."
+
+Welcome to **Day 3** of my Object-Oriented Programming (OOP) journey in Python.
+
+In the previous days, I learned about **Classes, Objects, Constructors, Attributes, Methods, and the `self` keyword**.
+
+Today, I explored **Encapsulation**, one of the four fundamental pillars of Object-Oriented Programming.
+
+---
+
+# 📖 What is Encapsulation?
+
+Encapsulation is the process of **combining data (attributes) and behavior (methods) into a single unit (class)** while controlling how the data is accessed and modified.
+
+Its main purpose is to protect an object's data from unauthorized or accidental changes.
+
+---
+
+# 🎯 Why Do We Need Encapsulation?
+
+Imagine a bank account.
+
+A user should be able to:
+
+- Deposit money
+- Withdraw money
+- Check balance
+
+But the user should **not** be able to directly modify the balance like this:
+
+```python
+account.balance = -100000
+```
+
+Instead, the balance should only change through methods such as:
+
+```python
+account.deposit(1000)
+account.withdraw(500)
+```
+
+This ensures that invalid operations cannot corrupt the data.
+
+---
+
+# 📌 Access Specifiers in Python
+
+Python provides three levels of access control.
+
+| Type | Syntax | Accessible Outside Class? |
+|------|--------|---------------------------|
+| Public | `name` | ✅ Yes |
+| Protected | `_name` | ✅ Yes (Convention Only) |
+| Private | `__name` | ❌ No (Directly) |
+
+---
+
+# 🟢 Public Members
+
+Public members can be accessed from anywhere.
+
+Example
+
+```python
+class Student:
+
+    def __init__(self):
+        self.name = "Viraj"
+
+student = Student()
+
+print(student.name)
+```
+
+Output
+
+```
+Viraj
+```
+
+---
+
+# 🟡 Protected Members
+
+Protected members begin with a single underscore (`_`).
+
+Example
+
+```python
+class Student:
+
+    def __init__(self):
+        self._marks = 95
+```
+
+Protected members **can still be accessed**, but the underscore indicates:
+
+> "This member is intended for internal use."
+
+It is a naming convention rather than a strict restriction.
+
+---
+
+# 🔴 Private Members
+
+Private members begin with two underscores (`__`).
+
+Example
+
+```python
+class Student:
+
+    def __init__(self):
+        self.__password = "python123"
+```
+
+Trying to access it directly:
+
+```python
+print(student.__password)
+```
+
+Results in:
+
+```
+AttributeError
+```
+
+Python hides private variables using **Name Mangling**.
+
+---
+
+# 🧠 Name Mangling
+
+Python internally changes
+
+```python
+self.__password
+```
+
+to
+
+```python
+self._Student__password
+```
+
+This makes accidental access more difficult and encourages developers to use methods instead.
+
+---
+
+# 📥 Getter Methods
+
+A Getter method is used to safely access private data.
+
+Example
+
+```python
+class Student:
+
+    def __init__(self):
+        self.__marks = 90
+
+    def get_marks(self):
+        return self.__marks
+```
+
+Usage
+
+```python
+student = Student()
+
+print(student.get_marks())
+```
+
+Output
+
+```
+90
+```
+
+---
+
+# 📤 Setter Methods
+
+A Setter method updates private data after validating it.
+
+Example
+
+```python
+class Student:
+
+    def __init__(self):
+        self.__marks = 90
+
+    def set_marks(self, marks):
+
+        if marks >= 0:
+            self.__marks = marks
+```
+
+This prevents invalid values from being stored.
+
+---
+
+# 📊 Public vs Protected vs Private
+
+| Feature | Public | Protected | Private |
+|----------|---------|-----------|----------|
+| Syntax | `name` | `_name` | `__name` |
+| Accessible Everywhere | ✅ | ✅ (Not Recommended) | ❌ Directly |
+| Data Protection | Low | Medium | High |
+| Purpose | General Use | Internal Use | Sensitive Data |
+
+---
+
+# 💻 Code Example
+
+```python
+class BankAccount:
+
+    def __init__(self, balance):
+        self.__balance = balance
+
+    def deposit(self, amount):
+        self.__balance += amount
+
+    def withdraw(self, amount):
+
+        if amount <= self.__balance:
+            self.__balance -= amount
+
+    def get_balance(self):
+        return self.__balance
+
+
+account = BankAccount(1000)
+
+account.deposit(500)
+
+account.withdraw(300)
+
+print(account.get_balance())
+```
+
+Output
+
+```
+1200
+```
+
+---
+
+# 🛠️ Practical Work Completed
+
+✔ Learned Encapsulation
+
+✔ Created Public Variables
+
+✔ Created Protected Variables
+
+✔ Created Private Variables
+
+✔ Used Getter Methods
+
+✔ Used Setter Methods
+
+✔ Learned Name Mangling
+
+✔ Protected object data using methods
+
+---
+
+# 📂 Repository Structure
+
+```
+Day-03-Encapsulation/
+│
+├── examples.py
+├── practice_questions.py
+├── mini_project.py
+├── challenge_questions.py
+└── README.md
+```
+
+---
+
+# 🎯 Key Takeaways
+
+- Encapsulation combines data and methods inside a class.
+- Public members are accessible everywhere.
+- Protected members are intended for internal use.
+- Private members protect sensitive data.
+- Getter methods safely return private data.
+- Setter methods validate data before updating it.
+- Encapsulation improves code security and maintainability.
+
+---
+
+# 📝 Interview Questions
+
+## What is Encapsulation?
+
+Encapsulation is the process of binding data and methods into a single class while restricting direct access to sensitive data.
+
+---
+
+## Why are private variables used?
+
+Private variables protect object data from unauthorized modification.
+
+---
+
+## What is Name Mangling?
+
+Name Mangling is Python's mechanism of internally renaming private variables to reduce accidental access.
+
+---
+
+## What is the purpose of Getter methods?
+
+Getter methods provide controlled access to private variables.
+
+---
+
+## What is the purpose of Setter methods?
+
+Setter methods safely update private variables while performing validation.
+
+---
+
+# 🚀 Next Topic (Day 4)
+
+In the next chapter, I'll learn:
+
+- Inheritance
+- Single Inheritance
+- Multilevel Inheritance
+- Multiple Inheritance
+- Hierarchical Inheritance
+- Hybrid Inheritance
+- Method Overriding
+- `super()` Function
+
+---
+
+## 📖 Quote of the Day
+
+> "Encapsulation doesn't hide data to make life difficult—it protects data to make software reliable."
+
+---
+
+### ⭐ If you found this repository helpful, consider giving it a star!
