@@ -1,0 +1,385 @@
+# 📘 Day 2 - Constructors, Attributes, Methods & `self` in Python OOP
+
+> "Objects become useful when they have data and behavior."
+
+Welcome to **Day 2** of my Object-Oriented Programming (OOP) journey in Python.
+
+On Day 1, I learned how to create **Classes** and **Objects**.
+
+Today, I learned how to make objects useful by adding:
+
+- Constructors (`__init__`)
+- Attributes
+- Methods
+- The `self` keyword
+
+---
+
+# 📖 What is a Constructor?
+
+A **Constructor** is a special method that is automatically called whenever an object is created.
+
+In Python, the constructor is written as:
+
+```python
+__init__()
+```
+
+Its main purpose is to initialize an object's data.
+
+---
+
+## Syntax
+
+```python
+class Student:
+
+    def __init__(self):
+        print("Object Created")
+```
+
+Whenever we create an object,
+
+```python
+s1 = Student()
+```
+
+Python automatically executes the constructor.
+
+---
+
+# 🤔 Why Do We Need Constructors?
+
+Imagine creating a student.
+
+Every student has:
+
+- Name
+- Age
+- Roll Number
+
+Instead of assigning these values one by one after creating the object, we can initialize them immediately using the constructor.
+
+Example
+
+```python
+class Student:
+
+    def __init__(self, name, age):
+
+        self.name = name
+        self.age = age
+```
+
+Now every object stores its own information.
+
+---
+
+# 📌 What is `self`?
+
+`self` refers to the **current object**.
+
+Whenever Python creates an object, it automatically passes that object as the first argument to every instance method.
+
+Example
+
+```python
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+```
+
+Here,
+
+`self.name`
+
+means
+
+"The `name` attribute of this particular object."
+
+---
+
+# 📝 Instance Attributes
+
+Instance Attributes are variables that belong to an object.
+
+Example
+
+```python
+class Student:
+
+    def __init__(self, name, age):
+
+        self.name = name
+        self.age = age
+```
+
+Here,
+
+- `name`
+- `age`
+
+are instance attributes.
+
+Different objects can store different values.
+
+Example
+
+```python
+s1 = Student("Viraj",20)
+s2 = Student("Rahul",19)
+```
+
+Output
+
+```
+Viraj 20
+Rahul 19
+```
+
+---
+
+# ⚙️ Methods
+
+A Method is simply a function inside a class.
+
+Methods define the behavior of an object.
+
+Example
+
+```python
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+
+    def introduce(self):
+        print("Hello, my name is", self.name)
+```
+
+Calling the method
+
+```python
+s1 = Student("Viraj")
+
+s1.introduce()
+```
+
+Output
+
+```
+Hello, my name is Viraj
+```
+
+---
+
+# 🎯 Attributes vs Methods
+
+| Attributes | Methods |
+|------------|---------|
+| Store data | Perform actions |
+| name | introduce() |
+| age | study() |
+| marks | sleep() |
+
+---
+
+# 📌 Accessing Attributes
+
+Use the dot (`.`) operator.
+
+Example
+
+```python
+print(s1.name)
+print(s1.age)
+```
+
+---
+
+# 📌 Calling Methods
+
+Methods are also called using the dot operator.
+
+Example
+
+```python
+s1.introduce()
+```
+
+---
+
+# 📖 Object Creation Flow
+
+```
+Create Class
+      │
+      ▼
+Create Object
+      │
+      ▼
+Constructor (__init__) runs automatically
+      │
+      ▼
+Attributes are initialized
+      │
+      ▼
+Methods can use those attributes
+```
+
+---
+
+# 🧠 Important Notes
+
+### Constructor
+
+- Special method
+- Runs automatically
+- Used for initialization
+
+---
+
+### self
+
+- Refers to the current object
+- Required in every instance method
+- Automatically passed by Python
+
+---
+
+### Attributes
+
+- Store information
+- Belong to an object
+- Different objects can have different values
+
+---
+
+### Methods
+
+- Functions inside a class
+- Define object behavior
+- Can access attributes using `self`
+
+---
+
+# 💻 Code Example
+
+```python
+class Student:
+
+    def __init__(self, name, age):
+
+        self.name = name
+        self.age = age
+
+    def display(self):
+
+        print("Name :", self.name)
+        print("Age :", self.age)
+
+student1 = Student("Viraj",20)
+
+student1.display()
+```
+
+Output
+
+```
+Name : Viraj
+Age : 20
+```
+
+---
+
+# 🛠️ Practical Work Completed
+
+✔ Created constructors using `__init__`
+
+✔ Used the `self` keyword
+
+✔ Created instance attributes
+
+✔ Built methods inside classes
+
+✔ Created multiple objects with different values
+
+✔ Accessed attributes using dot notation
+
+✔ Called methods using dot notation
+
+---
+
+# 📂 Repository Structure
+
+```
+Day-02-OOP-Constructors/
+│
+├── examples.py
+├── practice_questions.py
+├── mini_project.py
+└── README.md
+```
+
+---
+
+# 🎯 Key Takeaways
+
+- Every object can have its own data.
+- Constructors initialize objects automatically.
+- `self` always refers to the current object.
+- Attributes store data.
+- Methods define behavior.
+- Objects created from the same class can contain different values.
+
+---
+
+# 📝 Interview Questions
+
+### What is a constructor?
+
+A constructor is a special method (`__init__`) that automatically runs when an object is created and is used to initialize object data.
+
+---
+
+### What is `self`?
+
+`self` refers to the current instance (object) of a class and allows access to its attributes and methods.
+
+---
+
+### What are instance attributes?
+
+Instance attributes are variables that belong to an individual object. Different objects can have different values for these attributes.
+
+---
+
+### What is a method?
+
+A method is a function defined inside a class that describes the behavior or actions of an object.
+
+---
+
+# 🚀 Next Topic (Day 3)
+
+On Day 3, I will learn:
+
+- Encapsulation
+- Public Members
+- Protected Members
+- Private Members
+- Getter Methods
+- Setter Methods
+
+These concepts will help me write more secure and organized Python code.
+
+---
+
+## 📖 Quote of the Day
+
+> "A class defines what an object can be. A constructor gives it life, attributes give it identity, and methods give it behavior."
+
+---
+
+### ⭐ If you found this repository helpful, consider giving it a star!
