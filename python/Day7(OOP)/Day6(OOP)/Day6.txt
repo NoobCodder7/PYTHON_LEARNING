@@ -1,0 +1,247 @@
+ Abstraction in Python
+
+## 📖 Overview
+
+Today I learned **Abstraction**, one of the four fundamental principles of Object-Oriented Programming (OOP).
+
+Abstraction focuses on **hiding the internal implementation** of a program while exposing only the essential features to the user. It allows us to create a common blueprint that child classes must follow, making code more structured, maintainable, and scalable.
+
+---
+
+# 📚 Topics Covered
+
+- What is Abstraction?
+- Why Abstraction is needed
+- Real-life examples of Abstraction
+- Abstract Class
+- Abstract Method
+- The `abc` module
+- `ABC` (Abstract Base Class)
+- `@abstractmethod` decorator
+- Rules of Abstraction
+- Difference between Abstraction and Encapsulation
+
+---
+
+# 🧠 Key Concepts
+
+## What is Abstraction?
+
+Abstraction is the process of **hiding implementation details** and showing only the required functionality to the user.
+
+### Real-Life Examples
+
+- ATM Machine
+- Car
+- Mobile Phone
+- TV Remote
+- Coffee Machine
+
+In all these examples, users interact with simple buttons or controls without knowing how the internal system works.
+
+---
+
+## Abstract Class
+
+An Abstract Class is a class that acts as a blueprint for other classes.
+
+It cannot be instantiated (an object cannot be created directly from it).
+
+Example:
+
+```python
+from abc import ABC
+
+class Animal(ABC):
+    pass
+```
+
+---
+
+## Abstract Method
+
+An Abstract Method is a method that has only a declaration and **no implementation**.
+
+Every child class must implement all abstract methods.
+
+Example:
+
+```python
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+
+    @abstractmethod
+    def sound(self):
+        pass
+```
+
+---
+
+## ABC (Abstract Base Class)
+
+`ABC` is provided by Python's `abc` module.
+
+It is used to create abstract classes.
+
+Import statement:
+
+```python
+from abc import ABC, abstractmethod
+```
+
+---
+
+## @abstractmethod
+
+The `@abstractmethod` decorator tells Python that the method **must be implemented** by every child class.
+
+Example:
+
+```python
+class Dog(Animal):
+
+    def sound(self):
+        print("Woof")
+```
+
+---
+
+# 📖 Rules of Abstraction
+
+- Import `ABC` and `abstractmethod` from the `abc` module.
+- The parent class must inherit from `ABC`.
+- Abstract methods must use the `@abstractmethod` decorator.
+- Every child class must implement all abstract methods.
+- Objects cannot be created directly from an abstract class.
+
+---
+
+# 💻 Practice Completed
+
+- Created abstract classes
+- Created abstract methods
+- Used the `abc` module
+- Implemented `ABC`
+- Used the `@abstractmethod` decorator
+- Built child classes by implementing abstract methods
+- Practiced multiple abstraction-based examples
+
+---
+
+# 🛠 Mini Projects
+
+### ✅ Vehicle Management System
+- Parent: `Vehicle`
+- Children: `Car`, `Bike`, `Bus`
+- Abstract Method: `start()`
+
+---
+
+### ✅ Animal Management System
+- Parent: `Animal`
+- Children: `Dog`, `Cat`, `Lion`
+- Abstract Method: `sound()`
+
+---
+
+### ✅ Payment Gateway System
+- Parent: `Payment`
+- Children: `UPI`, `CreditCard`, `PayPal`
+- Abstract Method: `pay()`
+
+---
+
+### ✅ Hospital Management System
+- Parent: `Staff`
+- Children:
+  - Doctor
+  - Nurse
+  - Receptionist
+- Abstract Method: `work()`
+
+---
+
+### ⭐ Major Project - Smart Home Automation
+
+Parent:
+
+```text
+SmartDevice
+```
+
+Children:
+
+- Fan
+- AC
+- TV
+- Light
+- Washing Machine
+
+Abstract Methods:
+
+```python
+turn_on()
+turn_off()
+```
+
+Each child class provides its own implementation.
+
+---
+
+# 🎯 Key Takeaways
+
+- Abstraction hides unnecessary implementation details.
+- Abstract classes act as blueprints.
+- Abstract methods force child classes to provide their own implementation.
+- The `abc` module makes abstraction possible in Python.
+- Abstraction improves code organization and enforces consistency.
+
+---
+
+# 📂 Repository Structure
+
+```
+Day-5-Abstraction/
+│
+├── theory_notes.py
+├── examples.py
+├── practice_questions.py
+├── mini_projects.py
+├── major_project.py
+└── README.md
+```
+
+---
+
+# 🛠 Technologies Used
+
+- Python 3
+- Object-Oriented Programming (OOP)
+- abc Module
+
+---
+
+# 🚀 Learning Outcome
+
+After completing this module, I can:
+
+- Explain Abstraction in simple terms.
+- Create Abstract Classes.
+- Create Abstract Methods.
+- Use the `abc` module.
+- Implement `ABC` and `@abstractmethod`.
+- Build real-world projects using Abstraction.
+- Differentiate between Abstraction and Encapsulation.
+
+
+---
+
+## 📖 OOP Journey Progress
+
+- ✅ Day 1 – Classes & Objects
+- ✅ Day 2 – Constructors & Methods
+- ✅ Day 3 – Encapsulation
+- ✅ Day 4 – Inheritance
+- ✅ Day 5 – Abstraction
+- ⏳ Day 6 – Magic (Dunder) Methods
