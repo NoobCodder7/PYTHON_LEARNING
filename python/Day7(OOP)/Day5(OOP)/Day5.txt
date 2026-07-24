@@ -1,0 +1,40 @@
+# 📅 Day 5 - Polymorphism in Python
+
+## 📚 Topics Covered
+
+- What is Polymorphism?
+- Method Overriding
+- Runtime Polymorphism
+- `super()` Function
+- Method Resolution Order (MRO)
+- Duck Typing
+
+## 💻 Practice
+
+- 15 Practice Questions
+- 5 Mini Projects
+- 1 Major Project
+
+## 🛠️ Mini Projects
+
+- Animal Sounds
+- Employee System
+- Vehicle System
+- Food Ordering
+- Payment Gateway
+
+## 🚀 Major Project
+
+Hospital Management System using Polymorphism
+
+## 🎯 Key Takeaways
+
+- Understood how one interface can have multiple behaviors.
+- Learned to override methods in child classes.
+- Used `super()` to access parent functionality.
+- Explored MRO and Duck Typing.
+- Built projects to reinforce runtime polymorphism.
+
+---
+
+⭐ If you found this repository useful, consider giving it a star!
