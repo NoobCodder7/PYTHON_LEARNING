@@ -1,0 +1,218 @@
+# 📘 Day 4 - Inheritance in Python
+
+## 📖 Overview
+
+Today I learned **Inheritance**, one of the four fundamental principles of Object-Oriented Programming (OOP).
+
+Inheritance allows one class (called the **child class**) to reuse the attributes and methods of another class (called the **parent class**). This helps reduce code duplication and makes programs more organized and easier to maintain.
+
+---
+
+# 📚 Topics Covered
+
+* What is Inheritance?
+* Why Inheritance is used
+* Parent (Base) Class
+* Child (Derived) Class
+* Creating objects from inherited classes
+* Constructor Inheritance
+* Using `super()`
+* Method Overriding
+* Types of Inheritance
+
+  * Single Inheritance
+  * Multiple Inheritance
+  * Multilevel Inheritance
+  * Hierarchical Inheritance
+  * Hybrid Inheritance
+* `isinstance()`
+* `issubclass()`
+
+---
+
+# 🧠 Key Concepts
+
+## Inheritance
+
+Inheritance is a feature of OOP that allows one class to inherit the properties and methods of another class.
+
+It promotes **code reusability**, making it unnecessary to rewrite the same functionality in multiple classes.
+
+---
+
+## Parent Class
+
+A parent class is the class whose properties and methods are inherited by another class.
+
+Example:
+
+```python
+class Animal:
+    def eat(self):
+        print("Eating")
+```
+
+---
+
+## Child Class
+
+A child class inherits everything from the parent class and can also have its own methods and attributes.
+
+Example:
+
+```python
+class Dog(Animal):
+    def bark(self):
+        print("Barking")
+```
+
+---
+
+## Constructor Inheritance
+
+If a child class does not define its own constructor, it automatically inherits the constructor of the parent class.
+
+---
+
+## The `super()` Function
+
+The `super()` function is used to call methods or constructors from the parent class.
+
+Example:
+
+```python
+class Animal:
+    def __init__(self):
+        print("Animal Created")
+
+class Dog(Animal):
+    def __init__(self):
+        super().__init__()
+        print("Dog Created")
+```
+
+---
+
+## Method Overriding
+
+Method overriding occurs when a child class provides its own implementation of a method that already exists in the parent class.
+
+Example:
+
+```python
+class Animal:
+    def sound(self):
+        print("Animal Sound")
+
+class Dog(Animal):
+    def sound(self):
+        print("Bark")
+```
+
+---
+
+# 📖 Types of Inheritance
+
+### 1. Single Inheritance
+
+One child class inherits from one parent class.
+
+### 2. Multiple Inheritance
+
+One child class inherits from multiple parent classes.
+
+### 3. Multilevel Inheritance
+
+A child class becomes the parent of another class.
+
+### 4. Hierarchical Inheritance
+
+Multiple child classes inherit from the same parent class.
+
+### 5. Hybrid Inheritance
+
+A combination of two or more inheritance types.
+
+---
+
+# 📌 Built-in Functions
+
+### `isinstance()`
+
+Checks whether an object belongs to a specific class.
+
+Example:
+
+```python
+isinstance(dog, Dog)
+```
+
+---
+
+### `issubclass()`
+
+Checks whether one class is derived from another class.
+
+Example:
+
+```python
+issubclass(Dog, Animal)
+```
+
+---
+
+# 💻 Practice Completed
+
+* Created parent and child classes
+* Reused methods through inheritance
+* Used constructors in inherited classes
+* Practiced the `super()` function
+* Implemented method overriding
+* Built inheritance examples using different inheritance types
+* Practiced `isinstance()` and `issubclass()`
+
+---
+
+# 🎯 Key Takeaways
+
+* Inheritance helps avoid duplicate code.
+* Child classes can reuse the functionality of parent classes.
+* `super()` allows access to parent class methods and constructors.
+* Method overriding enables child classes to provide specialized behavior.
+* Inheritance is one of the core concepts used to build scalable and maintainable applications.
+
+---
+
+# 🛠 Technologies
+
+* Python 3
+* Object-Oriented Programming (OOP)
+
+---
+
+## 📂 Repository Structure
+
+```
+Day-4-Inheritance/
+│
+├── theory_notes.py
+├── practice_questions.py
+├── examples.py
+├── mini_projects.py
+└── README.md
+```
+
+---
+
+## 🚀 Next Topic
+
+**Day 5 – Polymorphism**
+
+Topics to explore:
+
+* Method Overloading (Python approach)
+* Method Overriding
+* Duck Typing
+* Operator Overloading
+* Runtime Polymorphism
+* Practical OOP examples
