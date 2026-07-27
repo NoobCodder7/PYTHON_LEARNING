@@ -1,0 +1,227 @@
+# 📘 NumPy Day 1 – Introduction to NumPy
+
+## 📖 Overview
+
+Welcome to **Day 1** of the NumPy learning roadmap!
+
+Today, you'll learn the fundamentals of NumPy, the most important Python library for numerical computing. NumPy is the foundation for Data Analysis, Machine Learning, Artificial Intelligence, Scientific Computing, and many other Python libraries.
+
+By the end of this day, you'll know how to create NumPy arrays, understand why NumPy is preferred over Python lists, and practice creating different types of arrays.
+
+---
+
+# 🎯 Learning Objectives
+
+After completing Day 1, you will be able to:
+
+- Understand what NumPy is.
+- Install and import NumPy.
+- Explain why NumPy is used.
+- Understand the `ndarray`.
+- Differentiate Python Lists and NumPy Arrays.
+- Create arrays using different NumPy functions.
+- Solve beginner and intermediate practice problems.
+
+---
+
+# 📚 Topics Covered
+
+## 1. Introduction to NumPy
+
+- What is NumPy?
+- Features of NumPy
+- Advantages of NumPy
+- Applications of NumPy
+
+---
+
+## 2. Installation
+
+```bash
+pip install numpy
+```
+
+Check installation:
+
+```bash
+pip show numpy
+```
+
+---
+
+## 3. Importing NumPy
+
+```python
+import numpy as np
+```
+
+---
+
+## 4. ndarray (N-Dimensional Array)
+
+Learn about:
+
+- 1D Array
+- 2D Array
+- 3D Array
+
+---
+
+## 5. Python List vs NumPy Array
+
+Understand the differences between:
+
+- Speed
+- Memory usage
+- Mathematical operations
+- Performance
+- Data storage
+
+---
+
+## 6. Creating Arrays
+
+Learn the following functions:
+
+- `np.array()`
+- `np.zeros()`
+- `np.ones()`
+- `np.empty()`
+- `np.arange()`
+- `np.linspace()`
+- `np.eye()`
+- `np.identity()`
+- `np.full()`
+
+---
+
+# 📌 Functions Learned
+
+| Function | Purpose |
+|----------|---------|
+| `np.array()` | Create an array from a list or tuple |
+| `np.zeros()` | Create an array filled with zeros |
+| `np.ones()` | Create an array filled with ones |
+| `np.empty()` | Create an uninitialized array |
+| `np.arange()` | Create a sequence of numbers |
+| `np.linspace()` | Create evenly spaced numbers |
+| `np.eye()` | Create an identity matrix |
+| `np.identity()` | Create an identity matrix |
+| `np.full()` | Fill an array with a specified value |
+
+---
+
+# 🧠 Key Concepts Learned
+
+- NumPy stands for **Numerical Python**.
+- NumPy stores data in **ndarray** objects.
+- Arrays are faster than Python lists.
+- Arrays consume less memory.
+- Mathematical operations are easier with NumPy.
+- NumPy is the backbone of Data Science and Machine Learning.
+
+---
+
+# 💻 Practice Questions
+
+## Beginner
+
+1. Create an integer array.
+2. Create a float array.
+3. Create a string array.
+4. Create a boolean array.
+5. Create a 5×5 zeros matrix.
+6. Create a 4×4 ones matrix.
+7. Create numbers from 1–100.
+8. Create evenly spaced numbers using `linspace()`.
+9. Create an identity matrix.
+10. Create a matrix filled with a custom value.
+
+---
+
+## Intermediate
+
+1. Create even numbers from 2–100.
+2. Create odd numbers from 1–99.
+3. Create a 3×3 matrix filled with 100.
+4. Create two identity matrices using different functions.
+5. Create a 2×5 ones matrix and multiply it by 25.
+6. Create a tuple and convert it into a NumPy array.
+7. Create a 6×6 zeros matrix.
+8. Create a 5×5 matrix filled with 9.
+9. Create 20 evenly spaced numbers between 5 and 15.
+10. Create an empty matrix and observe the output.
+
+---
+
+# 🚀 Mini Project
+
+## Student Marks Array
+
+Create a program that:
+
+- Imports NumPy.
+- Stores marks of 10 students.
+- Prints the marks.
+- Creates an attendance matrix using ones.
+- Creates a passing marks matrix using `np.full()`.
+- Creates an identity matrix.
+- Generates roll numbers using `np.arange()`.
+- Generates percentages using `np.linspace()`.
+
+---
+
+# 📝 Revision Checklist
+
+- [ ] Installed NumPy
+- [ ] Imported NumPy
+- [ ] Understood ndarray
+- [ ] Learned the difference between Lists and Arrays
+- [ ] Practiced all array creation functions
+- [ ] Solved all practice questions
+- [ ] Completed the mini project
+
+---
+
+# 📖 Real-World Applications
+
+NumPy is used in:
+
+- Data Analysis
+- Machine Learning
+- Artificial Intelligence
+- Deep Learning
+- Computer Vision
+- Image Processing
+- Scientific Computing
+- Financial Analysis
+- Robotics
+- Big Data
+
+---
+
+# 📈 What's Next?
+
+## Day 2 – Array Properties
+
+You will learn:
+
+- `shape`
+- `size`
+- `dtype`
+- `ndim`
+- `itemsize`
+- `nbytes`
+- `astype()`
+- `copy()`
+- `view()`
+
+These properties help you inspect, understand, and manipulate NumPy arrays efficiently.
+
+---
+
+## 🎯 End Goal
+
+After completing Day 1, you should be confident in creating NumPy arrays and understanding why NumPy is one of the most essential libraries for Data Analysis, AI, and Machine Learning.
+
+**Happy Learning! 🚀**
