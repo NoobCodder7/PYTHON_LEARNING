@@ -1,0 +1,275 @@
+# 📘 NumPy Day 3 – Indexing & Slicing
+
+## 📖 Overview
+
+Welcome to **Day 3** of the NumPy roadmap!
+
+After learning how to create arrays and understand their properties, today's focus is on **accessing and extracting data** from NumPy arrays.
+
+Indexing and slicing are among the most important NumPy concepts because real-world datasets often contain thousands or even millions of records. Instead of working with an entire dataset, you'll learn how to access only the data you need.
+
+These concepts are used daily in Data Analysis, Machine Learning, and Artificial Intelligence.
+
+---
+
+# 🎯 Learning Objectives
+
+By the end of this lesson, you will be able to:
+
+- Access individual elements using indexing.
+- Use positive and negative indexing.
+- Extract data using slicing.
+- Work with 2D and 3D array indexing.
+- Filter data using Boolean Indexing.
+- Select multiple elements using Fancy Indexing.
+- Retrieve specific rows and columns from datasets.
+
+---
+
+# 📚 Topics Covered
+
+## 1. Positive Indexing
+
+Learn how to access elements from the beginning of an array.
+
+Examples:
+
+- First element
+- Second element
+- Last element using positive index
+
+---
+
+## 2. Negative Indexing
+
+Learn how to access elements from the end of an array.
+
+Examples:
+
+- Last element
+- Second last element
+- Third last element
+
+---
+
+## 3. Array Slicing
+
+Learn how to extract multiple elements using:
+
+- Start index
+- Stop index
+- Step value
+
+Examples include:
+
+- First five elements
+- Last five elements
+- Alternate elements
+- Reverse an array
+- Entire array
+
+---
+
+## 4. 2D Array Indexing
+
+Learn how to access:
+
+- Individual elements
+- Rows
+- Columns
+- Corners of a matrix
+- Middle element
+
+---
+
+## 5. 2D Array Slicing
+
+Practice extracting:
+
+- First row
+- Last row
+- First column
+- Last column
+- Multiple rows
+- Multiple columns
+- Submatrices
+
+---
+
+## 6. 3D Array Indexing
+
+Understand how to access elements inside:
+
+- Blocks
+- Rows
+- Columns
+
+Learn how multidimensional arrays are organized.
+
+---
+
+## 7. Boolean Indexing
+
+Learn how to filter arrays using conditions.
+
+Examples:
+
+- Values greater than a number
+- Values less than a number
+- Even numbers
+- Odd numbers
+- Passing marks
+- High salaries
+
+---
+
+## 8. Fancy Indexing
+
+Learn how to select multiple elements using lists of indices.
+
+Examples:
+
+- Select multiple values
+- Select multiple rows
+- Reorder data
+
+---
+
+# 📌 Concepts Learned
+
+| Concept | Purpose |
+|---------|---------|
+| Positive Indexing | Access elements from the beginning |
+| Negative Indexing | Access elements from the end |
+| Slicing | Extract multiple elements |
+| 2D Indexing | Access rows and columns |
+| 3D Indexing | Access multidimensional data |
+| Boolean Indexing | Filter data using conditions |
+| Fancy Indexing | Select multiple elements by index |
+
+---
+
+# 🧠 Key Concepts Learned
+
+- NumPy indexing starts from **0**.
+- Negative indexing starts from **-1**.
+- Slicing follows the format `start:stop:step`.
+- The stop index is **not included**.
+- Boolean indexing returns only values that satisfy a condition.
+- Fancy indexing allows selecting multiple elements simultaneously.
+- Indexing and slicing make data extraction fast and efficient.
+
+---
+
+# 💻 Practice Questions
+
+## Beginner
+
+1. Create a NumPy array and print the first element.
+2. Print the last element using negative indexing.
+3. Print the middle element.
+4. Slice the first five elements.
+5. Slice the last four elements.
+6. Print every second element.
+7. Reverse an array using slicing.
+8. Create a 3×3 matrix and print the first row.
+9. Print the second column of a matrix.
+10. Print the center element of a 3×3 matrix.
+
+---
+
+## Intermediate
+
+1. Create a 5×5 matrix and print the diagonal elements.
+2. Print the last two rows.
+3. Print the first three columns.
+4. Reverse all rows.
+5. Reverse all columns.
+6. Print all elements greater than 50 using Boolean Indexing.
+7. Print all even numbers from an array.
+8. Print all odd numbers from an array.
+9. Select elements at indices `[1, 3, 5, 7]` using Fancy Indexing.
+10. Create a 3D array and access the last element.
+
+---
+
+# 🚀 Mini Project
+
+## Student Marks Analysis
+
+Create a program that:
+
+- Imports NumPy.
+- Creates a `5 × 5` matrix containing marks of five students in five subjects.
+- Prints the complete marks matrix.
+- Prints:
+  - First student's marks
+  - Last student's marks
+  - Marks of the third subject
+  - First two students' marks
+  - Last two students' marks
+- Displays:
+  - Marks greater than 80
+  - Passing marks (greater than or equal to 35)
+  - Even marks
+- Reverses the order of students.
+- Selects students at indices `0`, `2`, and `4` using Fancy Indexing.
+
+---
+
+# 📝 Revision Checklist
+
+- [ ] Learned positive indexing
+- [ ] Learned negative indexing
+- [ ] Understood array slicing
+- [ ] Practiced step slicing
+- [ ] Reversed arrays using slicing
+- [ ] Learned 2D indexing
+- [ ] Learned 2D slicing
+- [ ] Learned 3D indexing
+- [ ] Practiced Boolean Indexing
+- [ ] Practiced Fancy Indexing
+- [ ] Solved all practice questions
+- [ ] Completed the mini project
+
+---
+
+# 🌍 Real-World Applications
+
+Indexing and slicing are used in:
+
+- Data Cleaning
+- Data Filtering
+- Machine Learning
+- Data Analysis
+- Image Processing
+- Time-Series Analysis
+- Financial Data Analysis
+- Customer Data Segmentation
+
+Professionals use indexing to retrieve specific rows, columns, and records from large datasets without processing unnecessary data.
+
+---
+
+# 📈 What's Next?
+
+## Day 4 – NumPy Array Operations
+
+You will learn:
+
+- Arithmetic Operations
+- Comparison Operations
+- Universal Functions (UFuncs)
+- Broadcasting
+- Aggregate Operations
+- Vectorized Calculations
+
+These concepts will help you perform fast mathematical computations on entire datasets without using loops.
+
+---
+
+# 🎯 End Goal
+
+After completing Day 3, you'll be able to efficiently access, extract, and filter data from NumPy arrays using indexing, slicing, Boolean Indexing, and Fancy Indexing. These are essential skills for every Data Analyst, Data Scientist, and Machine Learning Engineer.
+
+**Happy Learning! 🚀**
