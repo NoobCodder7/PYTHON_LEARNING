@@ -1,0 +1,280 @@
+# 📘 NumPy Day 2 – Array Properties
+
+## 📖 Overview
+
+Welcome to **Day 2** of the NumPy roadmap!
+
+After learning how to create NumPy arrays in Day 1, today you'll learn how to inspect and understand them using **array properties**.
+
+These properties help you answer questions like:
+
+- How many rows and columns are there?
+- How many elements are stored?
+- What is the datatype?
+- How much memory is used?
+- How can we convert datatypes?
+- What is the difference between `copy()` and `view()`?
+
+Understanding these concepts is essential before working with real-world datasets.
+
+---
+
+# 🎯 Learning Objectives
+
+By the end of this lesson, you will be able to:
+
+- Understand the structure of a NumPy array.
+- Find the dimensions and size of arrays.
+- Identify the datatype of array elements.
+- Calculate memory usage.
+- Convert one datatype to another.
+- Understand the difference between `copy()` and `view()`.
+- Analyze arrays before performing operations on them.
+
+---
+
+# 📚 Topics Covered
+
+## 1. `shape`
+
+Learn how to determine:
+
+- Number of rows
+- Number of columns
+- Structure of an array
+
+---
+
+## 2. `size`
+
+Learn how to find:
+
+- Total number of elements present in an array
+
+---
+
+## 3. `ndim`
+
+Understand:
+
+- Number of dimensions
+- Difference between 1D, 2D, and 3D arrays
+
+---
+
+## 4. `dtype`
+
+Learn:
+
+- Datatype of array elements
+- Integer arrays
+- Float arrays
+- String arrays
+- Boolean arrays
+
+---
+
+## 5. `itemsize`
+
+Understand:
+
+- Memory occupied by one element
+- Bytes used for different datatypes
+
+---
+
+## 6. `nbytes`
+
+Learn:
+
+- Total memory occupied by an array
+- Relationship between `size`, `itemsize`, and `nbytes`
+
+Formula:
+
+```text
+Total Memory = Size × Itemsize
+```
+
+---
+
+## 7. `astype()`
+
+Learn how to:
+
+- Convert integer arrays to float
+- Convert float arrays to integer
+- Convert arrays to different datatypes
+
+---
+
+## 8. `copy()`
+
+Understand:
+
+- Independent copy of an array
+- Changes do not affect the original array
+
+---
+
+## 9. `view()`
+
+Understand:
+
+- Shared copy of an array
+- Changes affect both arrays
+
+---
+
+# 📌 Functions and Properties Learned
+
+| Property / Function | Purpose |
+|---------------------|---------|
+| `shape` | Returns array dimensions |
+| `size` | Returns total elements |
+| `ndim` | Returns number of dimensions |
+| `dtype` | Returns datatype |
+| `itemsize` | Returns memory used by one element |
+| `nbytes` | Returns total memory used |
+| `astype()` | Converts datatype |
+| `copy()` | Creates an independent copy |
+| `view()` | Creates a shared copy |
+
+---
+
+# 🧠 Key Concepts Learned
+
+- Every NumPy array has properties that describe its structure.
+- `shape` tells the dimensions of an array.
+- `size` gives the total number of elements.
+- `ndim` tells how many dimensions an array has.
+- `dtype` identifies the datatype of the array.
+- `itemsize` tells how much memory one element occupies.
+- `nbytes` calculates the total memory used.
+- `astype()` changes the datatype of an array.
+- `copy()` creates a completely separate array.
+- `view()` shares the same memory as the original array.
+
+---
+
+# 🔍 Difference Between copy() and view()
+
+| copy() | view() |
+|----------|---------|
+| Creates a new array | Shares the original array |
+| Uses more memory | Uses less memory |
+| Changes don't affect original | Changes affect original |
+| Independent | Dependent |
+
+---
+
+# 💻 Practice Questions
+
+## Beginner
+
+1. Create a 1D array and print its shape.
+2. Create a 2D array and print its size.
+3. Print the number of dimensions of a 3D array.
+4. Create an integer array and print its datatype.
+5. Create a float array and print its datatype.
+6. Print the item size of an integer array.
+7. Print the total memory used by a NumPy array.
+8. Convert an integer array into a float array.
+9. Convert a float array into an integer array.
+10. Print all properties of a NumPy array.
+
+---
+
+## Intermediate
+
+1. Create a 4×5 matrix and print all its properties.
+2. Compare `int32` and `float64` using `itemsize`.
+3. Create a string array and print its datatype.
+4. Convert an integer matrix to float.
+5. Create a copy of an array and modify it.
+6. Create a view of an array and modify it.
+7. Verify the difference between `copy()` and `view()`.
+8. Create a 3D array and print all properties.
+9. Verify that `nbytes = size × itemsize`.
+10. Write a function that displays every property of any NumPy array.
+
+---
+
+# 🚀 Mini Project
+
+## Employee Salary Dataset
+
+Build a program that:
+
+- Creates an array containing salaries of 10 employees.
+- Prints the salary array.
+- Displays:
+  - Shape
+  - Size
+  - Number of dimensions
+  - Datatype
+  - Item size
+  - Total memory used
+- Converts salaries from integer to float.
+- Creates a copy of the salary array and modifies it.
+- Creates a view of the salary array and modifies it.
+- Compare the outputs to understand `copy()` and `view()`.
+
+---
+
+# 📝 Revision Checklist
+
+- [ ] Learned `shape`
+- [ ] Learned `size`
+- [ ] Learned `ndim`
+- [ ] Learned `dtype`
+- [ ] Learned `itemsize`
+- [ ] Learned `nbytes`
+- [ ] Practiced `astype()`
+- [ ] Understood `copy()`
+- [ ] Understood `view()`
+- [ ] Solved all practice questions
+- [ ] Completed the mini project
+
+---
+
+# 🌍 Real-World Applications
+
+These properties are used in:
+
+- Data Cleaning
+- Data Analysis
+- Machine Learning
+- Artificial Intelligence
+- Image Processing
+- Deep Learning
+- Financial Analytics
+- Scientific Computing
+
+Before training a machine learning model or analyzing data, professionals always inspect datasets using properties like `shape`, `dtype`, and `ndim`.
+
+---
+
+# 📈 What's Next?
+
+## Day 3 – Indexing and Slicing
+
+You will learn:
+
+- Positive Indexing
+- Negative Indexing
+- Array Slicing
+- 2D Slicing
+- 3D Slicing
+- Boolean Indexing
+- Fancy Indexing
+
+These concepts will help you access, filter, and manipulate specific data within NumPy arrays.
+
+---
+
+# 🎯 End Goal
+
+After completing Day 2, you'll be able to inspect any NumPy array, understand its structure, memory usage, and datatype, and confidently prepare data for further analysis and manipulation.
+
+**Happy Learning! 🚀**
