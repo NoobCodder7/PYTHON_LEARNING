@@ -1,0 +1,586 @@
+# 🛡️ Python Exception Handling (Complete Notes)
+
+# What is Exception Handling?
+
+Exception Handling is a mechanism in Python that allows a program to handle runtime errors gracefully without crashing.
+
+Instead of terminating the program, Python catches the error and allows the program to continue executing.
+
+---
+
+# Why Do We Need Exception Handling?
+
+Without Exception Handling:
+
+- Program crashes immediately.
+- Remaining code does not execute.
+- Poor user experience.
+
+With Exception Handling:
+
+- Prevents program crashes.
+- Displays meaningful error messages.
+- Makes applications more reliable.
+- Allows programs to continue running.
+
+---
+
+# What is an Exception?
+
+An Exception is an error that occurs while the program is running (Runtime Error).
+
+Example:
+
+```python
+print(10/0)
+```
+
+Output
+
+```
+ZeroDivisionError: division by zero
+```
+
+---
+
+# Syntax of Exception Handling
+
+```python
+try:
+    # Code that may cause an error
+
+except:
+    # Code to handle the error
+```
+
+Example
+
+```python
+try:
+    print(10/0)
+
+except:
+    print("Cannot divide by zero.")
+```
+
+Output
+
+```
+Cannot divide by zero.
+```
+
+---
+
+# Flow of Exception Handling
+
+```
+Program Starts
+       │
+       ▼
+   try Block
+       │
+       ▼
+Error Occurred?
+   │          │
+  No         Yes
+   │          │
+   ▼          ▼
+Next Line   except Block
+       │
+       ▼
+Program Continues
+```
+
+---
+
+# try Block
+
+The `try` block contains the code that might generate an exception.
+
+Example
+
+```python
+try:
+    number = int(input("Enter a number: "))
+```
+
+---
+
+# except Block
+
+The `except` block executes only if an exception occurs.
+
+Example
+
+```python
+try:
+    print(10/0)
+
+except:
+    print("Division by zero is not allowed.")
+```
+
+---
+
+# Catching Specific Exceptions
+
+Instead of catching every exception, catch only the required exception.
+
+Example
+
+```python
+try:
+    print(10/0)
+
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+```
+
+---
+
+# Common Exceptions
+
+## 1. ZeroDivisionError
+
+Occurs when dividing by zero.
+
+```python
+try:
+    print(20/0)
+
+except ZeroDivisionError:
+    print("Division by zero is not allowed.")
+```
+
+---
+
+## 2. ValueError
+
+Occurs when invalid data is passed.
+
+```python
+try:
+    age = int(input("Enter age: "))
+
+except ValueError:
+    print("Please enter numbers only.")
+```
+
+---
+
+## 3. TypeError
+
+Occurs when incompatible data types are used.
+
+```python
+try:
+    print("10" + 10)
+
+except TypeError:
+    print("Invalid operation.")
+```
+
+---
+
+## 4. IndexError
+
+Occurs when accessing an invalid index.
+
+```python
+numbers = [10,20,30]
+
+try:
+    print(numbers[5])
+
+except IndexError:
+    print("Index does not exist.")
+```
+
+---
+
+## 5. KeyError
+
+Occurs when accessing a dictionary key that doesn't exist.
+
+```python
+student = {"name":"Viraj"}
+
+try:
+    print(student["age"])
+
+except KeyError:
+    print("Key not found.")
+```
+
+---
+
+## 6. NameError
+
+Occurs when using an undefined variable.
+
+```python
+try:
+    print(age)
+
+except NameError:
+    print("Variable not defined.")
+```
+
+---
+
+## 7. FileNotFoundError
+
+Occurs when the file doesn't exist.
+
+```python
+try:
+    with open("data.txt","r") as file:
+        print(file.read())
+
+except FileNotFoundError:
+    print("File not found.")
+```
+
+---
+
+## 8. AttributeError
+
+Occurs when an object doesn't have a particular method.
+
+```python
+try:
+    x = (10,20)
+
+    x.append(30)
+
+except AttributeError:
+    print("Tuple has no append() method.")
+```
+
+---
+
+# Multiple Exceptions
+
+A single try block can have multiple except blocks.
+
+```python
+try:
+
+    number = int(input("Enter number: "))
+
+    print(100/number)
+
+except ValueError:
+    print("Enter only numbers.")
+
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+```
+
+---
+
+# else Block
+
+The `else` block executes only if no exception occurs.
+
+Syntax
+
+```python
+try:
+    pass
+
+except:
+    pass
+
+else:
+    pass
+```
+
+Example
+
+```python
+try:
+
+    number = int(input("Enter number: "))
+
+    print(10/number)
+
+except ZeroDivisionError:
+
+    print("Cannot divide.")
+
+else:
+
+    print("Program executed successfully.")
+```
+
+---
+
+# finally Block
+
+The `finally` block always executes whether an exception occurs or not.
+
+Syntax
+
+```python
+try:
+    pass
+
+except:
+    pass
+
+finally:
+    pass
+```
+
+Example
+
+```python
+try:
+
+    print(10/2)
+
+except:
+
+    print("Error")
+
+finally:
+
+    print("Program Finished")
+```
+
+Output
+
+```
+5
+Program Finished
+```
+
+---
+
+# Exception as e
+
+Used to display the actual error message.
+
+Syntax
+
+```python
+try:
+    pass
+
+except Exception as e:
+    print(e)
+```
+
+Example
+
+```python
+try:
+
+    print(10/0)
+
+except Exception as e:
+
+    print(e)
+```
+
+Output
+
+```
+division by zero
+```
+
+---
+
+# Raising Exceptions
+
+Python allows us to generate exceptions manually using `raise`.
+
+Syntax
+
+```python
+raise ExceptionName("Message")
+```
+
+Example
+
+```python
+age = int(input("Enter Age: "))
+
+if age < 18:
+    raise ValueError("You are not eligible.")
+```
+
+---
+
+# User Defined Exception
+
+```python
+class InvalidAge(Exception):
+    pass
+
+age = 15
+
+if age < 18:
+    raise InvalidAge("Age must be 18 or above.")
+```
+
+---
+
+# Nested try
+
+```python
+try:
+
+    try:
+
+        print(10/0)
+
+    except ZeroDivisionError:
+
+        print("Inner Exception")
+
+except:
+
+    print("Outer Exception")
+```
+
+---
+
+# Best Practices
+
+✅ Catch specific exceptions.
+
+❌ Avoid using
+
+```python
+except:
+```
+
+unless absolutely necessary.
+
+---
+
+Always use
+
+```python
+with open()
+```
+
+when working with files.
+
+---
+
+Use
+
+```python
+finally
+```
+
+to close database connections or files.
+
+---
+
+Use
+
+```python
+Exception as e
+```
+
+while debugging.
+
+---
+
+# Real Life Uses
+
+- ATM Machine
+- Banking System
+- Hospital Management System
+- Student Management System
+- File Handling
+- Login Systems
+- AI/ML Applications
+- APIs
+- Web Development
+
+---
+
+# Exception Handling with File Handling
+
+```python
+try:
+
+    with open("data.txt","r") as file:
+
+        print(file.read())
+
+except FileNotFoundError:
+
+    print("File does not exist.")
+
+finally:
+
+    print("Operation Completed")
+```
+
+---
+
+# Summary Table
+
+| Keyword | Purpose |
+|----------|---------|
+| `try` | Code that may generate an exception |
+| `except` | Handles the exception |
+| `else` | Executes if no exception occurs |
+| `finally` | Always executes |
+| `raise` | Generates an exception manually |
+| `Exception as e` | Stores the exception object |
+
+---
+
+# Most Common Exceptions
+
+- ZeroDivisionError
+- ValueError
+- TypeError
+- IndexError
+- KeyError
+- NameError
+- FileNotFoundError
+- AttributeError
+- ImportError
+- ModuleNotFoundError
+- PermissionError
+
+---
+
+# Interview Questions
+
+1. What is Exception Handling?
+2. Difference between Syntax Error and Exception?
+3. What is the purpose of `try`?
+4. What is the purpose of `except`?
+5. Difference between `else` and `finally`?
+6. What is `Exception as e`?
+7. What is `raise`?
+8. What is a User Defined Exception?
+9. Explain `FileNotFoundError`.
+10. Why should we catch specific exceptions instead of using a generic `except`?
+
+---
+
+# Learning Outcome
+
+After completing Exception Handling, you should be able to:
+
+✅ Prevent Python programs from crashing.
+
+✅ Handle common runtime errors.
+
+✅ Use `try`, `except`, `else`, and `finally` correctly.
+
+✅ Raise your own exceptions.
+
+✅ Build robust Python applications.
+
+✅ Apply Exception Handling in File Handling, OOP, APIs, AI/ML, and real-world projects.

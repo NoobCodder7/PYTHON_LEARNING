@@ -1,0 +1,314 @@
+# 📘 NumPy Day 4 – Array Operations & Broadcasting
+
+## 📖 Overview
+
+Welcome to **Day 4** of the NumPy roadmap!
+
+After learning how to create arrays, inspect their properties, and access data using indexing and slicing, it's time to perform **mathematical operations** on arrays.
+
+One of NumPy's biggest advantages is its ability to perform operations on entire arrays without using loops. This feature makes NumPy incredibly fast and efficient, making it the preferred choice for Data Analysis, Machine Learning, Artificial Intelligence, and Scientific Computing.
+
+In this lesson, you'll learn how to perform arithmetic operations, comparison operations, use Universal Functions (UFuncs), understand broadcasting, and apply vectorized computations.
+
+---
+
+# 🎯 Learning Objectives
+
+By the end of this lesson, you will be able to:
+
+- Perform arithmetic operations on NumPy arrays.
+- Apply scalar operations to arrays.
+- Compare array elements using comparison operators.
+- Use NumPy Universal Functions (UFuncs).
+- Perform aggregate calculations.
+- Work with row-wise and column-wise operations using `axis`.
+- Understand broadcasting.
+- Write efficient vectorized code without loops.
+
+---
+
+# 📚 Topics Covered
+
+## 1. Arithmetic Operations
+
+Perform element-wise operations on arrays:
+
+- Addition (`+`)
+- Subtraction (`-`)
+- Multiplication (`*`)
+- Division (`/`)
+- Floor Division (`//`)
+- Modulus (`%`)
+- Exponent (`**`)
+
+---
+
+## 2. Scalar Operations
+
+Apply a single value to every element of an array.
+
+Examples:
+
+- Add a number
+- Subtract a number
+- Multiply by a number
+- Divide by a number
+
+---
+
+## 3. Comparison Operations
+
+Compare array elements using:
+
+- Greater than (`>`)
+- Less than (`<`)
+- Greater than or equal to (`>=`)
+- Less than or equal to (`<=`)
+- Equal to (`==`)
+- Not equal to (`!=`)
+
+These operations return Boolean arrays.
+
+---
+
+## 4. Universal Functions (UFuncs)
+
+Learn NumPy's built-in mathematical functions:
+
+- `np.abs()`
+- `np.sqrt()`
+- `np.power()`
+- `np.exp()`
+- `np.log()`
+- `np.sin()`
+- `np.cos()`
+- `np.tan()`
+
+---
+
+## 5. Aggregate Functions
+
+Summarize data using:
+
+- `np.sum()`
+- `np.mean()`
+- `np.min()`
+- `np.max()`
+- `np.prod()`
+- `np.cumsum()`
+- `np.cumprod()`
+
+---
+
+## 6. Axis Operations
+
+Perform operations:
+
+- Row-wise (`axis=1`)
+- Column-wise (`axis=0`)
+
+Examples:
+
+- Sum of rows
+- Sum of columns
+- Mean of rows
+- Mean of columns
+
+---
+
+## 7. Broadcasting
+
+Learn how NumPy automatically performs operations on arrays with compatible shapes.
+
+Examples:
+
+- Add a scalar to a matrix
+- Add two arrays of different shapes
+- Multiply arrays using broadcasting
+
+---
+
+## 8. Vectorization
+
+Replace loops with NumPy operations for:
+
+- Faster execution
+- Cleaner code
+- Better memory efficiency
+
+---
+
+# 📌 Functions Learned
+
+## Arithmetic
+
+- `+`
+- `-`
+- `*`
+- `/`
+- `//`
+- `%`
+- `**`
+
+---
+
+## Comparison
+
+- `>`
+- `<`
+- `>=`
+- `<=`
+- `==`
+- `!=`
+
+---
+
+## Universal Functions
+
+- `np.abs()`
+- `np.sqrt()`
+- `np.power()`
+- `np.exp()`
+- `np.log()`
+- `np.sin()`
+- `np.cos()`
+- `np.tan()`
+
+---
+
+## Aggregate Functions
+
+- `np.sum()`
+- `np.mean()`
+- `np.min()`
+- `np.max()`
+- `np.prod()`
+- `np.cumsum()`
+- `np.cumprod()`
+
+---
+
+# 🧠 Key Concepts Learned
+
+- NumPy performs element-wise arithmetic operations.
+- Scalar operations affect every element in an array.
+- Comparison operators return Boolean arrays.
+- Universal Functions (UFuncs) perform mathematical computations efficiently.
+- Aggregate functions summarize data quickly.
+- `axis=0` performs operations column-wise.
+- `axis=1` performs operations row-wise.
+- Broadcasting allows operations on arrays with compatible shapes.
+- Vectorization eliminates the need for loops and significantly improves performance.
+
+---
+
+# 💻 Practice Questions
+
+## Beginner
+
+1. Add two NumPy arrays.
+2. Subtract one array from another.
+3. Multiply two arrays.
+4. Divide two arrays.
+5. Find the square of every element.
+6. Add 50 to every element.
+7. Find the sum of all elements.
+8. Find the average of an array.
+9. Find the smallest value.
+10. Find the largest value.
+
+---
+
+## Intermediate
+
+1. Find the row-wise sum of a matrix.
+2. Find the column-wise sum of a matrix.
+3. Calculate the mean of each row.
+4. Calculate the mean of each column.
+5. Use `np.sqrt()` on an array.
+6. Find the cumulative sum of an array.
+7. Find the cumulative product of an array.
+8. Compare two arrays using `==`.
+9. Add a scalar to a matrix using broadcasting.
+10. Double every value using vectorization instead of loops.
+
+---
+
+# 🚀 Mini Project
+
+## Employee Salary Analysis
+
+Create a program that:
+
+- Imports NumPy.
+- Creates an array containing salaries of 10 employees.
+- Increases every salary by **5000** using vectorization.
+- Finds:
+  - Total salary expense
+  - Average salary
+  - Highest salary
+  - Lowest salary
+- Displays employees earning more than **50000**.
+- Creates a 2D salary matrix and calculates:
+  - Row-wise totals
+  - Column-wise totals
+- Uses broadcasting to add a bonus to all employees.
+
+---
+
+# 📝 Revision Checklist
+
+- [ ] Learned arithmetic operations
+- [ ] Practiced scalar operations
+- [ ] Learned comparison operations
+- [ ] Used Universal Functions (UFuncs)
+- [ ] Practiced aggregate functions
+- [ ] Understood `axis=0` and `axis=1`
+- [ ] Learned broadcasting
+- [ ] Used vectorization
+- [ ] Solved all practice questions
+- [ ] Completed the mini project
+
+---
+
+# 🌍 Real-World Applications
+
+These concepts are used in:
+
+- Data Analysis
+- Machine Learning
+- Artificial Intelligence
+- Financial Analytics
+- Scientific Computing
+- Image Processing
+- Business Intelligence
+- Statistical Analysis
+
+Professionals use NumPy operations to process millions of data points efficiently without writing loops, making data processing faster and more scalable.
+
+---
+
+# 📈 What's Next?
+
+## Day 5 – Array Reshaping & Manipulation
+
+You will learn:
+
+- `reshape()`
+- `flatten()`
+- `ravel()`
+- `transpose()`
+- `resize()`
+- `expand_dims()`
+- `squeeze()`
+- `swapaxes()`
+
+These functions are essential for preparing datasets for machine learning models, image processing, and advanced data analysis.
+
+---
+
+# 🎯 End Goal
+
+After completing Day 4, you'll be able to perform mathematical operations on entire arrays, summarize data efficiently, leverage broadcasting, and write high-performance NumPy code using vectorization. These are core skills required for Data Analysis, Data Science, and Machine Learning.
+
+**Happy Learning! 🚀**
